@@ -1,0 +1,19 @@
+name: Make JSON
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+
+jobs:
+  make-json:
+    name: Make JSON
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - uses: actions/checkout@v3
+      # - run: python make_json.py
