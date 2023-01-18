@@ -6,7 +6,7 @@ import re
 
 test = "test" in sys.argv
 if test:
-    cache_dir = letter_dir = os.path.join(
+    cache_dir = os.path.join(
         os.path.dirname(os.path.realpath(__file__)),
         "_cache")
     if not os.path.isdir(cache_dir):

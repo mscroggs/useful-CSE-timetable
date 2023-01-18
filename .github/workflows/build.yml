@@ -9,7 +9,7 @@ on:
 
 jobs:
   make-json:
-    name: Make JSON
+    name: Make JSON and website
     runs-on: ubuntu-latest
     steps:
       - name: Set up Python
@@ -17,21 +17,37 @@ jobs:
         with:
           python-version: "3.11"
       - uses: actions/checkout@v3
-      - run: |
-          python make_json.py
-          mkdir ../_json
-          cp talks.json ../_json/
+      - run: python make_json.py
         name: Make JSON
 
       - run: |
+          mkdir ../_json
+          cp talks.json ../_json/
           cd ../_json
           git config --global user.email "symfem@mscroggs.co.uk"
           git config --global user.name "Finite Element Bot"
           git init
           git checkout -b json
           git add .
-          git commit -m "Build HTML website"
+          git commit -m "Make JSON"
           git remote add origin https://symfembot:${{ secrets.symfembot_token }}@github.com/mscroggs/useful-CSE-timetable.git
           git push -u origin json --force
         name: Push website to json branch
+        if: github.ref == 'refs/heads/main'
+
+      - run: |
+          mkdir ../_html
+          python make_html.py
+        name: Make HTML
+      - run: |
+          cd ../_html
+          git config --global user.email "symfem@mscroggs.co.uk"
+          git config --global user.name "Finite Element Bot"
+          git init
+          git checkout -b gh-pages
+          git add .
+          git commit -m "Make JSON"
+          git remote add origin https://symfembot:${{ secrets.symfembot_token }}@github.com/mscroggs/useful-CSE-timetable.git
+          git push -u origin gh-pages --force
+        name: Push website to gh-pages branch
         if: github.ref == 'refs/heads/main'
