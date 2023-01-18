@@ -17,4 +17,21 @@ jobs:
         with:
           python-version: "3.11"
       - uses: actions/checkout@v3
-      # - run: python make_json.py
+      - run: |
+          python make_json.py
+          mkdir ../_json
+          cp talks.json ../_json/
+        name: Make JSON
+
+      - run: |
+          cd ../_html
+          git config --global user.email "symfem@mscroggs.co.uk"
+          git config --global user.name "Finite Element Bot"
+          git init
+          git checkout -b json
+          git add .
+          git commit -m "Build HTML website"
+          git remote add origin https://symfembot:${{ secrets.symfembot_token }}@github.com/mscroggs/useful-CSE-timetable.git
+          git push -u origin json --force
+        name: Push website to json branch
+        if: github.ref == 'refs/heads/main'

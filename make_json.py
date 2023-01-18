@@ -32,7 +32,6 @@ def load_page(url):
 
 page = load_page("https://meetings.siam.org/speakdex.cfm?CONFCODE=CSE23")
 page = page.split("<body")[1].split(">", 1)[1]
-# page = page.split("<dl>")[1].split("</dl>")[0].split("<br />")
 
 sessions = set()
 
@@ -42,8 +41,8 @@ for talk in page.split("<table")[1].split("<", 1)[1].split("<br />"):
 
 talks = {}
 
-for id in sessions:
-    print(id)
+for id in sorted(list(sessions)):
+    # print(id)
     url = f"https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE={id}"
     page = load_page(url)
 
@@ -51,26 +50,34 @@ for id in sessions:
     title = page.split("<h2>")[1].split("</h2>")[0].split("</br>")[1].strip()
     code = page.split("<h2>")[1].split("</h2>")[0].split("</br>")[0].strip()
     time = page.split("<p>")[1].split("<br />")[0].strip()
+    start, end = time.split(" - ")
     room = page.split("Room:")[1].split("<")[0].strip() if "Room:" in page else None
 
     if "PD" in code:
         # panel discussion
-        pass
-    elif "dsp_talk.cfm" in page:
-        # minisympsium talk
-        talks[id] = {"type": "talk"}
-    else:
-        print("plenary")
-        print(code)
-        continue
-        # plenary
-        talks[id] = {"type": "plenary", "code": code, "date": date, "title": title, "time": time, }
-        talks[id]["date"] = page.split("<h3>")[1].split("</h3>")
-        talks[id]["title"] = page.split("<h2>")[1].split("</h2>")[0].split("</br>")[1].strip()
-        talks[id]["sessioncode"] = page.split("<h2>")[1].split("</h2>")[0].split("</br>")[0].strip()
-        talks[id]["time"] = page.split("<p>")[1].split("<br />")[0].strip()
-        talks[id]["room"] = page.split("Room:")[1].split("<")[0].strip()
-        break
+        talks[id] = {"type": "panel", "date": date, "code": code, "time": (start, end), "room": room, "title": title}
+        talks[id]["panel"] = [
+            p.split("</strong>")[0].strip()
+            for p in page.split("<strong>")[1:]]
+    elif "SP" in code:
+        # S? plenary
+        speaker = page.split("<b>")[1].split("</b>")[0].strip()
+        talks[id] = {"type": "prize", "date": date, "code": code, "time": (start, end), "room": room, "title": title, "speaker": speaker}
+    elif "IP" in code:
+        # I? plenary
+        speaker = page.split("<b>")[1].split("</b>")[0].strip()
+        talks[id] = {"type": "plenary", "date": date, "code": code, "time": (start, end), "room": room, "title": title, "speaker": speaker}
+    elif "CANCELLED" not in page:
+        assert "dsp_talk.cfm" in page
+        # minisympsium talks
+        for talk in page.split("<dt>")[1:]:
+            if "Cancelled" not in talk:
+                talk_id = talk.split("<a href=\"dsp_talk.cfm?p=")[1].split("\"")[0]
+                speaker = talk.split("<dd>")[1].split("<em>")[1].split("</EM>")[0].strip()
+                title = talk.split("<strong>")[1].split("</strong>")[0].strip()
+                if title.startswith("-"):
+                    title = title[1:].strip()
+                talks[talk_id] = {"type": "talk", "date": date, "code": code, "time": (start, end), "room": room, "speaker": speaker, "title": title}
 
 with open("talks.json", "w") as f:
     json.dump(talks, f)
