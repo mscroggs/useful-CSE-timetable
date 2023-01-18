@@ -41,8 +41,10 @@ for talk in page.split("<table")[1].split("<", 1)[1].split("<br />"):
 
 talks = {}
 
-for id in sorted(list(sessions)):
-    # print(id)
+sessions = sorted(list(sessions))
+
+for id in sessions:
+    print(f"{sessions.index[id] + 1}/{len(sessions)}")
     url = f"https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE={id}"
     page = load_page(url)
 
