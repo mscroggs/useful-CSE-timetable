@@ -44,7 +44,7 @@ talks = {}
 sessions = sorted(list(sessions))
 
 for id in sessions:
-    print(f"{sessions.index[id] + 1}/{len(sessions)}")
+    print(f"{sessions.index(id) + 1}/{len(sessions)}")
     url = f"https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE={id}"
     page = load_page(url)
 

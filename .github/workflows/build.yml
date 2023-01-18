@@ -24,7 +24,7 @@ jobs:
         name: Make JSON
 
       - run: |
-          cd ../_html
+          cd ../_json
           git config --global user.email "symfem@mscroggs.co.uk"
           git config --global user.name "Finite Element Bot"
           git init
