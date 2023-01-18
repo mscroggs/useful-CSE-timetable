@@ -37,7 +37,7 @@ jobs:
 
       - run: |
           mkdir ../_html
-          python make_html.py
+          python make_html.py ../_html
         name: Make HTML
       - run: |
           cd ../_html
@@ -46,7 +46,7 @@ jobs:
           git init
           git checkout -b gh-pages
           git add .
-          git commit -m "Make JSON"
+          git commit -m "Make web page"
           git remote add origin https://symfembot:${{ secrets.symfembot_token }}@github.com/mscroggs/useful-CSE-timetable.git
           git push -u origin gh-pages --force
         name: Push website to gh-pages branch
