@@ -1,8 +1,36 @@
 from urllib.request import urlopen
 import json
+import sys
+import os
+import re
 
-with urlopen("https://meetings.siam.org/speakdex.cfm?CONFCODE=CSE23") as f:
-    page = f.read().decode("utf-8")
+test = "test" in sys.argv
+if test:
+    cache_dir = letter_dir = os.path.join(
+        os.path.dirname(os.path.realpath(__file__)),
+        "_cache")
+    if not os.path.isdir(cache_dir):
+        os.mkdir(cache_dir)
+
+
+def load_page(url):
+    if test:
+        fname = re.sub(r"[^A-Za-z0-9_]", "_", url)
+        if os.path.isfile(os.path.join(cache_dir, fname)):
+            with open(os.path.join(cache_dir, fname)) as f:
+                return f.read()
+
+        with urlopen(url) as f:
+            page = f.read().decode("utf-8")
+        with open(os.path.join(cache_dir, fname), "w") as f:
+            f.write(page)
+        return page
+
+    with urlopen(url) as f:
+        return f.read().decode("utf-8")
+
+
+page = load_page("https://meetings.siam.org/speakdex.cfm?CONFCODE=CSE23")
 page = page.split("<body")[1].split(">", 1)[1]
 # page = page.split("<dl>")[1].split("</dl>")[0].split("<br />")
 
@@ -17,8 +45,7 @@ talks = {}
 for id in sessions:
     print(id)
     url = f"https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE={id}"
-    with urlopen(url) as f:
-        page = f.read().decode("utf-8")
+    page = load_page(url)
 
     date = page.split("<h3>")[1].split("</h3>")[0]
     title = page.split("<h2>")[1].split("</h2>")[0].split("</br>")[1].strip()
