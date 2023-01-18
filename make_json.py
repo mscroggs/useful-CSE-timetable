@@ -34,14 +34,30 @@ page = load_page("https://meetings.siam.org/speakdex.cfm?CONFCODE=CSE23")
 page = page.split("<body")[1].split(">", 1)[1]
 
 sessions = set()
+names = {}
 
 for talk in page.split("<table")[1].split("<", 1)[1].split("<br />"):
     if "SESSIONCODE=" in talk and "Canceled" not in talk:
         sessions.add(talk.split("SESSIONCODE=")[1].split("\"")[0])
-
-talks = {}
+        surname, forename = talk.split(":")[0].split(">")[-1].strip().split(", ")
+        names[forename + " " + surname] = (forename, surname)
 
 sessions = sorted(list(sessions))
+
+
+def name_split(name):
+    if name in names:
+        return names[name]
+    if ". " in name:
+        nsp = name.split(". ")
+        return ". ".join(nsp[:-1]) + ".", nsp[-1]
+    nsp = name.split(" ")
+    if len(nsp) == 2:
+        return nsp
+    return name
+
+
+talks = {}
 
 for id in sessions:
     print(f"{sessions.index(id) + 1}/{len(sessions)}")
@@ -59,16 +75,16 @@ for id in sessions:
         # panel discussion
         talks[id] = {"type": "panel", "date": date, "code": code, "time": (start, end), "room": room, "title": title}
         talks[id]["panel"] = [
-            p.split("</strong>")[0].strip()
+            name_split(p.split("</strong>")[0].strip())
             for p in page.split("<strong>")[1:]]
     elif "SP" in code:
         # S? plenary
         speaker = page.split("<b>")[1].split("</b>")[0].strip()
-        talks[id] = {"type": "prize", "date": date, "code": code, "time": (start, end), "room": room, "title": title, "speaker": speaker}
+        talks[id] = {"type": "prize", "date": date, "code": code, "time": (start, end), "room": room, "title": title, "speaker": name_split(speaker)}
     elif "IP" in code:
         # I? plenary
         speaker = page.split("<b>")[1].split("</b>")[0].strip()
-        talks[id] = {"type": "plenary", "date": date, "code": code, "time": (start, end), "room": room, "title": title, "speaker": speaker}
+        talks[id] = {"type": "plenary", "date": date, "code": code, "time": (start, end), "room": room, "title": title, "speaker": name_split(speaker)}
     elif "CANCELLED" not in page:
         assert "dsp_talk.cfm" in page
         # minisympsium talks
@@ -79,7 +95,7 @@ for id in sessions:
                 title = talk.split("<strong>")[1].split("</strong>")[0].strip()
                 if title.startswith("-"):
                     title = title[1:].strip()
-                talks[talk_id] = {"type": "talk", "date": date, "code": code, "time": (start, end), "room": room, "speaker": speaker, "title": title}
+                talks[talk_id] = {"type": "talk", "date": date, "code": code, "time": (start, end), "room": room, "speaker": name_split(speaker), "title": title}
 
 with open("talks.json", "w") as f:
     json.dump(talks, f)
