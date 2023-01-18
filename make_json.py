@@ -51,7 +51,7 @@ for id in sessions:
     date = page.split("<h3>")[1].split("</h3>")[0]
     title = page.split("<h2>")[1].split("</h2>")[0].split("</br>")[1].strip()
     code = page.split("<h2>")[1].split("</h2>")[0].split("</br>")[0].strip()
-    time = page.split("<p>")[1].split("<br />")[0].strip()
+    time = page.split("<p>")[1].split("<br")[0].strip()
     start, end = time.split(" - ")
     room = page.split("Room:")[1].split("<")[0].strip() if "Room:" in page else None
 
