@@ -22,7 +22,7 @@ jobs:
 
       - run: |
           mkdir ../_json
-          cp talks.json ../_json/
+          cp talks.json order.json ../_json/
           cd ../_json
           git config --global user.email "symfem@mscroggs.co.uk"
           git config --global user.name "Finite Element Bot"

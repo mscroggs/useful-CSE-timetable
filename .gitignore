@@ -1,7 +1,10 @@
 .*.swp
 *.pyc
-talks.json
+
 _cache
 _cache/*
 _html
 _html/*
+
+talks.json
+order.json

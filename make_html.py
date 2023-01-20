@@ -12,6 +12,8 @@ else:
 
 with open(os.path.join(dir, "talks.json")) as f:
     talks_json = f.read()
+with open(os.path.join(dir, "order.json")) as f:
+    order_json = f.read()
 
 if not os.path.isdir(target_dir):
     os.mkdir(target_dir)
@@ -22,6 +24,7 @@ for file in os.listdir(source_dir):
             content = f.read()
 
         content = content.replace("{{talks.json}}", talks_json)
+        content = content.replace("{{order.json}}", order_json)
 
         with open(os.path.join(target_dir, file), "w") as f:
             f.write(content)
