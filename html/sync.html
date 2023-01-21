@@ -21,7 +21,7 @@ function copy_to_clipboard(){
     navigator.clipboard.writeText(c.value);
 }
 function update_faves(){
-    var c = document.getElementById('encoded2').value
+    var c = document.getElementById('encoded2').value.trim()
     if (c == "") {
         document.getElementById("info").innerHTML = "You haven't pasted anything"
         document.getElementById("info").style.color = "#FF0000"
