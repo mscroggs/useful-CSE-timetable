@@ -4,7 +4,24 @@
 </head>
 <body>
 {{_header.html}}
+<div id='information'>This website is designed to help you navigate the SIAM CSE 2023 conference schedule.
+To get started, view <a href='speakers.html'>the list of all speakers</a> or <a href='titles.html'>the list of all talk titles</a>.
+On both those pages, you can click a star next to any speaker/talk that you want to add to your favourites.
+Once you've done this, a list of all your favourited talks will appear on this page.
+<br /><br />
+For example, if you click the star next to the name below, it will be added to your timetable. You can click the star again to remove the talk from your timetable.<br/>
+{{scroggs-star}} Matthew Scroggs
+<br /><br />
+<small>This website was made by <a href='https://mscroggs.co.uk'>Matthew Scroggs</a>; the code used to generate it can be found on <a href='https://github.com/mscroggs/useful-CSE-timetable/'>GitHub</a>.</small>
+</div>
 {{talks-list}}
 {{_foot.html}}
+<script type='text/javascript'>
+for (var i = 0; i < {{order.length}}; i++) {
+    if (i != {{scroggs-n}} && faves[i] == 1) {
+        document.getElementById("information").style.display = "none"
+    }
+}
+</script>
 </body>
 </html>

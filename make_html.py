@@ -35,18 +35,18 @@ def talk_info(talk):
     info += f"<small><a href='javascript:hide_bit({id})'>&#x25B2; Hide talk info &#x25B2;</a></small>"
     info += "<div style='padding:20px'>"
     if talk["type"] == "panel":
-        info += f"<b>{talk['title']}</b>"
+        info += f"<b>{to_html(talk['title'])}</b>"
         info += "<br />"
-        info += ", ".join(talk["panel"])
+        info += to_html(", ".join([" ".join(i) for i in talk["panel"]]))
         info += "<br />"
         info += f"{talk['date']} {'&ndash;'.join(talk['time'])}"
         if talk['room'] is not None:
             info += "<br />"
             info += talk['room']
     else:
-        info += f"<b>{talk['title']}</b>"
+        info += f"<b>{to_html(talk['title'])}</b>"
         info += "<br />"
-        info += " ".join(talk["speaker"])
+        info += to_html(" ".join(talk["speaker"]))
         info += "<br />"
         info += f"{talk['date']} {'&ndash;'.join(talk['time'])}"
         if talk['room'] is not None:
@@ -58,6 +58,10 @@ def talk_info(talk):
     info += "</span>"
     id += 1
     return info
+
+
+def star(id):
+    return f"<a href='javascript:toggle_star({id})' class='star'><span class='star{id}'>&star;</span></a>"
 
 
 with open(os.path.join(dir, "talks.json")) as f:
@@ -86,7 +90,7 @@ for i, n in enumerate(order):
     timestamp += t["time"][0].split(":")[1].split(" ")[0]
 
     talks_html = f"<div id='talk{i}' style='display:none'>"
-    talks_html += f"<a href='javascript:toggle_star({i})' class='star'><span class='star{i}'>&star;</span></a> "
+    talks_html += f"{star(i)} "
     talks_html += f"<b>{t['time'][0]}&ndash;{t['time'][1]}"
     if t["room"] is not None:
         talks_html += f" ({t['room']})"
@@ -112,18 +116,22 @@ for day, date in [
     talks_list_html += f"<h2>{day}</h2>"
     talks_list_html += "\n".join([i[1] for i in talks_list if date in i[0]])
 
+scroggs_star = ""
+scroggs_n = -1
 speakers = []
 for i, t in talks.items():
     if "speaker" in t:
         speakers.append([unidecode(", ".join(t["speaker"][::-1])).upper(), " ".join(t["speaker"]), order.index(i), t])
+        if speakers[-1][1] == "Matthew Scroggs":
+            scroggs_n = i
+            scroggs_star = star(speakers[-1][2])
     elif "panel" in t:
         for person in t["panel"]:
             speakers.append([unidecode(", ".join(person[::-1])).upper(), " ".join(person), order.index(i), t])
 
 speakers.sort(key=lambda x: x[0])
-
 list_speakers = "<br />".join([
-    f"<a href='javascript:toggle_star({s[2]})' class='star'><span class='star{s[2]}'>&star;</span></a> {to_html(s[1])} {talk_info(s[3])}"
+    f"{star(s[2])} {to_html(s[1])} {talk_info(s[3])}"
     for s in speakers
     if "ANNOUNCED" not in s[0]
 ])
@@ -135,7 +143,7 @@ for i, t in talks.items():
 titles.sort(key=lambda x: x[0])
 
 list_titles = "<br />".join([
-    f"<a href='javascript:toggle_star({t[2]})' class='star'><span class='star{t[2]}'>&star;</span></a> {to_html(t[1])} + {talk_info(t[3])}"
+    f"{star(t[2])} {to_html(t[1])} + {talk_info(t[3])}"
     for t in titles
 ])
 
@@ -146,6 +154,8 @@ def replace(content):
     content = content.replace("{{list-speakers}}", list_speakers)
     content = content.replace("{{list-titles}}", list_titles)
     content = content.replace("{{talks-list}}", talks_list_html)
+    content = content.replace("{{scroggs-n}}", scroggs_n)
+    content = content.replace("{{scroggs-star}}", scroggs_star)
     content = content.replace("{{talks.json}}", talks_json)
     content = content.replace("{{order.json}}", order_json)
     content = content.replace("{{order.length}}", f"{len(order)}")

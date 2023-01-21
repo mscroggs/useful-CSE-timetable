@@ -8,9 +8,7 @@ var chars = Array(
     "n", "o", "p", "q", "r", "s", "t", "u",
     "v", "w", "x", "y", "z", "!", "?", "-",
 )
-
 var nchar = 6
-
 console.assert(Math.pow(2, nchar) == chars.length)
 
 function encode(input_list) {
@@ -55,7 +53,6 @@ for (var i = 0; i < cookies.length; i++) {
         faves = decode(cookies[i].split("=")[1])
     }
 }
-
 function update_stars() {
     for (var i = 0; i < {{order.length}}; i++) {
         var e = document.getElementById("talk" + i)
