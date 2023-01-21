@@ -9,11 +9,15 @@ var chars = Array(
     "v", "w", "x", "y", "z", "!", "?", "$"
 )
 
+var nchar = 6
+
+console.assert(Math.pow(2, nchar) == chars.length)
+
 function encode(input_list) {
     var output = ""
-    for (var i = 0; i < input_list.length; i += 6) {
+    for (var i = 0; i < input_list.length; i += nchar) {
         var dec = 0
-        for (var j = 0; j < 6 && i + j < input_list.length; j++) {
+        for (var j = 0; j < nchar && i + j < input_list.length; j++) {
             if (input_list[i + j] == 1) {
                 dec += Math.pow(2, j)
             }
@@ -30,7 +34,7 @@ function decode(input_str) {
     var output = Array()
     for (var i = 0; i < input_str.length; i++) {
         var c = chars.indexOf(input_str.substring(i, i + 1))
-        for (var j = 0; j < 6 && output.length < {{order.length}}; j++) {
+        for (var j = 0; j < nchar && output.length < {{order.length}}; j++) {
             output[output.length] = c % 2
             c = (c - output[output.length-1]) / 2
         }
