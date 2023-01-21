@@ -60,8 +60,8 @@ def name_split(name):
 talks = {}
 
 for id in sessions:
-    print(f"{sessions.index(id) + 1}/{len(sessions)}")
     url = f"https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE={id}"
+    print(f"{sessions.index(id) + 1}/{len(sessions)} {url}")
     page = load_page(url)
 
     date = page.split("<h3>")[1].split("</h3>")[0]
@@ -91,7 +91,10 @@ for id in sessions:
         for talk in page.split("<dt>")[1:]:
             if "Cancelled" not in talk:
                 talk_id = talk.split("<a href=\"dsp_talk.cfm?p=")[1].split("\"")[0]
-                speaker = talk.split("<dd>")[1].split("<em>")[1].split("</EM>")[0].strip()
+                try:
+                    speaker = talk.split("<dd>")[1].split("<em>")[1].split("</EM>")[0].strip()
+                except:
+                    speaker = talk.split("<dd>")[1].split(",")[0].split(">")[-1].strip()
                 title = talk.split("<strong>")[1].split("</strong>")[0].strip()
                 if title.startswith("-"):
                     title = title[1:].strip()
