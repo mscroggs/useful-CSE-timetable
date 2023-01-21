@@ -24,6 +24,42 @@ def pad2(n):
     return n
 
 
+id = 0
+
+
+def talk_info(talk):
+    global id
+    info = " "
+    info += f"<span id='bitlink-{id}'><small><a href='javascript:show_bit({id})'>&#x25BC; Show talk info &#x25BC;</a></small></span>"
+    info += f"<span id='bit-{id}' style='display:none'>"
+    info += f"<small><a href='javascript:hide_bit({id})'>&#x25B2; Hide talk info &#x25B2;</a></small>"
+    info += "<div style='padding:20px'>"
+    if talk["type"] == "panel":
+        info += f"<b>{talk['title']}</b>"
+        info += "<br />"
+        info += ", ".join(talk["panel"])
+        info += "<br />"
+        info += f"{talk['date']} {'&ndash;'.join(talk['time'])}"
+        if talk['room'] is not None:
+            info += "<br />"
+            info += talk['room']
+    else:
+        info += f"<b>{talk['title']}</b>"
+        info += "<br />"
+        info += " ".join(talk["speaker"])
+        info += "<br />"
+        info += f"{talk['date']} {'&ndash;'.join(talk['time'])}"
+        if talk['room'] is not None:
+            info += "<br />"
+            info += talk['room']
+    info += "<br /><br />"
+    info += f"<small><a href='{talk['url']}'>More information on the conference website</a></small>"
+    info += "</div>"
+    info += "</span>"
+    id += 1
+    return info
+
+
 with open(os.path.join(dir, "talks.json")) as f:
     talks_json = f.read()
 with open(os.path.join(dir, "order.json")) as f:
@@ -59,6 +95,7 @@ for i, n in enumerate(order):
         talks_html += to_html(f"{', '.join([' '.join(i) for i in t['panel']])} {t['title']}")
     else:
         talks_html += to_html(f"{t['speaker'][0]} {t['speaker'][1]}, {t['title']}")
+    talks_html += talk_info(t)
     talks_html += "</div>"
 
     talks_list.append((timestamp, talks_html))
@@ -78,27 +115,27 @@ for day, date in [
 speakers = []
 for i, t in talks.items():
     if "speaker" in t:
-        speakers.append([unidecode(", ".join(t["speaker"][::-1])).upper(), " ".join(t["speaker"]), order.index(i)])
+        speakers.append([unidecode(", ".join(t["speaker"][::-1])).upper(), " ".join(t["speaker"]), order.index(i), t])
     elif "panel" in t:
         for person in t["panel"]:
-            speakers.append([unidecode(", ".join(person[::-1])).upper(), " ".join(person), order.index(i)])
+            speakers.append([unidecode(", ".join(person[::-1])).upper(), " ".join(person), order.index(i), t])
 
 speakers.sort(key=lambda x: x[0])
 
 list_speakers = "<br />".join([
-    f"<a href='javascript:toggle_star({s[2]})' class='star'><span class='star{s[2]}'>&star;</span></a> {to_html(s[1])}"
+    f"<a href='javascript:toggle_star({s[2]})' class='star'><span class='star{s[2]}'>&star;</span></a> {to_html(s[1])} {talk_info(s[3])}"
     for s in speakers
     if "ANNOUNCED" not in s[0]
 ])
 
 titles = []
 for i, t in talks.items():
-    titles.append([t["title"].upper(), t["title"], order.index(i)])
+    titles.append([t["title"].upper(), t["title"], order.index(i), t])
 
 titles.sort(key=lambda x: x[0])
 
 list_titles = "<br />".join([
-    f"<a href='javascript:toggle_star({t[2]})' class='star'><span class='star{t[2]}'>&star;</span></a> {to_html(t[1])}"
+    f"<a href='javascript:toggle_star({t[2]})' class='star'><span class='star{t[2]}'>&star;</span></a> {to_html(t[1])} + {talk_info(t[3])}"
     for t in titles
 ])
 

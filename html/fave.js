@@ -94,3 +94,13 @@ function save_stars() {
     var faves_str = encode(faves)
     document.cookie = "faves=" + faves_str + "; expires=Mon, 18 Dec 2023 12:00:00 UTC; path=/"
 }
+
+function show_bit(i) {
+    document.getElementById("bit-"+i).style.display = "inline"
+    document.getElementById("bitlink-"+i).style.display = "none"
+}
+
+function hide_bit(i) {
+    document.getElementById("bit-"+i).style.display = "none"
+    document.getElementById("bitlink-"+i).style.display = "inline"
+}
