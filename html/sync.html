@@ -1,0 +1,38 @@
+<html>
+<head>
+{{_head.html}}
+</head>
+<body>
+{{_header.html}}
+To copy your favourites to another device, copy this string of symbols:<br />
+<input type='text' id='encoded' length=7> <button onclick='copy_to_clipboard()'>Copy</button>
+<br /><br /><br /><br />
+To copy your favourites from another device, paste the string of symbols here:<br />
+<input type='text' id='encoded2' length=7> <button onclick='update_faves()'>Update favourites</button>
+<br />
+<span id='info'></span>
+
+<script type='text/javascript'>
+document.getElementById("encoded").value = encode(faves)
+function copy_to_clipboard(){
+    var c = document.getElementById('encoded')
+    c.select()
+    c.setSelectionRange(0, 99999)
+    navigator.clipboard.writeText(c.value);
+}
+function update_faves(){
+    var c = document.getElementById('encoded2').value
+    if (c == "") {
+        document.getElementById("info").innerHTML = "You haven't pasted anything"
+        document.getElementById("info").style.color = "#FF0000"
+        return
+    }
+    faves = decode(c)
+    save_stars()
+    document.getElementById("info").innerHTML = "Successfully updated starred talks"
+    document.getElementById("info").style.color = "#00A300"
+}
+</script>
+{{_foot.html}}
+</body>
+</html>

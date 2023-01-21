@@ -50,6 +50,7 @@ for i, n in enumerate(order):
     timestamp += t["time"][0].split(":")[1].split(" ")[0]
 
     talks_html = f"<div id='talk{i}' style='display:none'>"
+    talks_html += f"<a href='javascript:toggle_star({i})' class='star'><span class='star{i}'>&star;</span></a> "
     talks_html += f"<b>{t['time'][0]}&ndash;{t['time'][1]}"
     if t["room"] is not None:
         talks_html += f" ({t['room']})"
