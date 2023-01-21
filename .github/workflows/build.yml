@@ -17,12 +17,15 @@ jobs:
         with:
           python-version: "3.11"
       - uses: actions/checkout@v3
+      - run: python -m pip install -r requirements.txt
+        name: Install requirements
+
       - run: python make_json.py
         name: Make JSON
 
       - run: |
           mkdir ../_json
-          cp talks.json ../_json/
+          cp talks.json order.json ../_json/
           cd ../_json
           git config --global user.email "symfem@mscroggs.co.uk"
           git config --global user.name "Finite Element Bot"

@@ -102,3 +102,13 @@ for id in sessions:
 
 with open("talks.json", "w") as f:
     json.dump(talks, f)
+
+with urlopen("https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/order.json") as f:
+    order = json.loads(f.read().decode("utf-8"))
+
+for i in talks.keys():
+    if i not in order:
+        order.append(i)
+
+with open("order.json", "w") as f:
+    json.dump(order, f)
