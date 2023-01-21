@@ -73,18 +73,18 @@ for id in sessions:
 
     if "PD" in code:
         # panel discussion
-        talks[id] = {"type": "panel", "date": date, "code": code, "time": (start, end), "room": room, "title": title}
+        talks[id] = {"type": "panel", "date": date, "code": code, "time": (start, end), "room": room, "title": title, "url": url}
         talks[id]["panel"] = [
             name_split(p.split("</strong>")[0].strip())
             for p in page.split("<strong>")[1:]]
     elif "SP" in code:
         # S? plenary
         speaker = page.split("<b>")[1].split("</b>")[0].strip()
-        talks[id] = {"type": "prize", "date": date, "code": code, "time": (start, end), "room": room, "title": title, "speaker": name_split(speaker)}
+        talks[id] = {"type": "prize", "date": date, "code": code, "time": (start, end), "room": room, "title": title, "speaker": name_split(speaker), "url": url}
     elif "IP" in code:
         # I? plenary
         speaker = page.split("<b>")[1].split("</b>")[0].strip()
-        talks[id] = {"type": "plenary", "date": date, "code": code, "time": (start, end), "room": room, "title": title, "speaker": name_split(speaker)}
+        talks[id] = {"type": "plenary", "date": date, "code": code, "time": (start, end), "room": room, "title": title, "speaker": name_split(speaker), "url": url}
     elif "CANCELLED" not in page:
         assert "dsp_talk.cfm" in page
         # minisympsium talks
@@ -98,7 +98,7 @@ for id in sessions:
                 title = talk.split("<strong>")[1].split("</strong>")[0].strip()
                 if title.startswith("-"):
                     title = title[1:].strip()
-                talks[talk_id] = {"type": "talk", "date": date, "code": code, "time": (start, end), "room": room, "speaker": name_split(speaker), "title": title}
+                talks[talk_id] = {"type": "talk", "date": date, "code": code, "time": (start, end), "room": room, "speaker": name_split(speaker), "title": title, "url": url}
 
 with open("talks.json", "w") as f:
     json.dump(talks, f)
