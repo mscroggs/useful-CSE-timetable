@@ -154,7 +154,7 @@ for i, t in talks.items():
 titles.sort(key=lambda x: x[0])
 
 list_titles = "<br />".join([
-    f"{star(t[2])} {to_html(t[1])} + {talk_info(t[3])}"
+    f"{star(t[2])} {to_html(t[1])} {talk_info(t[3])}"
     for t in titles
 ])
 
