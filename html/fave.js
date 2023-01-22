@@ -11,7 +11,7 @@ var chars = Array(
 var nchar = 6
 console.assert(Math.pow(2, nchar) == chars.length)
 
-function encode(input_list) {
+function encode(input_list, short) {
     var output = ""
     for (var i = 0; i < input_list.length; i += nchar) {
         var dec = 0
@@ -22,13 +22,53 @@ function encode(input_list) {
         }
         output += chars[dec]
     }
-    while (output.charAt(output.length-1) == "0") {
+    while (output.charAt(output.length-1) == "_") {
         output = output.substr(0, output.length - 1)
     }
-    return output
+    if (!short) {
+        return output
+    }
+    output2 = ""
+    var n_ = 0
+    for (var i = 0; i < output.length; i++) {
+        var c = output.charAt(i)
+        if (c == "_") {
+            n_++
+        } else {
+            if (n_ > 0) {
+                output2 += "_" + n_ + "_"
+                n_ = 0
+            }
+            output2 += c
+        }
+    }
+    if (n_ > 0) {
+        output2 += "_" + n_ + "_"
+    }
+    return output2
 }
 
-function decode(input_str) {
+function decode(input_str, short) {
+    if (short) {
+        var new_input = ""
+        for (var i = 0; i < input_str.length; i++) {
+            c = input_str.charAt(i)
+            if (c == "_") {
+                j = 1
+                while (input_str.charAt(i + j + 1) != "_") {
+                    j += 1
+                }
+                var n = input_str.substr(i + 1, j) / 1
+                for (var k = 0; k < n; k++) {
+                    new_input += "_"
+                }
+                i += j + 1
+            } else {
+                new_input += c
+            }
+        }
+        input_str = new_input
+    }
     var output = Array()
     for (var i = 0; i < input_str.length; i++) {
         var c = chars.indexOf(input_str.substring(i, i + 1))
@@ -50,7 +90,7 @@ for (var i = 0; i < {{order.length}}; i++) {
 var cookies = document.cookie.split(";")
 for (var i = 0; i < cookies.length; i++) {
     if (cookies[i].split("=")[0].trim() == "faves") {
-        faves = decode(cookies[i].split("=")[1])
+        faves = decode(cookies[i].split("=")[1], false)
     }
 }
 function update_stars() {
@@ -88,7 +128,7 @@ function toggle_star(n) {
 }
 
 function save_stars() {
-    var faves_str = encode(faves)
+    var faves_str = encode(faves, false)
     document.cookie = "faves=" + faves_str + "; expires=Mon, 18 Dec 2023 12:00:00 UTC; path=/"
 }
 

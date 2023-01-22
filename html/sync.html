@@ -13,7 +13,7 @@ To copy your favourites from another device, paste the string of symbols here:<b
 <span id='info'></span>
 
 <script type='text/javascript'>
-document.getElementById("encoded").value = encode(faves)
+document.getElementById("encoded").value = encode(faves, true)
 function copy_to_clipboard(){
     var c = document.getElementById('encoded')
     c.select()
@@ -27,7 +27,7 @@ function update_faves(){
         document.getElementById("info").style.color = "#FF0000"
         return
     }
-    faves = decode(c)
+    faves = decode(c, true)
     save_stars()
     document.getElementById("info").innerHTML = "Successfully updated favourited talks"
     document.getElementById("info").style.color = "#00A300"
