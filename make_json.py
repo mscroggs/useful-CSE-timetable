@@ -85,6 +85,19 @@ for id in sessions:
         # I? plenary
         speaker = page.split("<b>")[1].split("</b>")[0].strip()
         talks[id] = {"type": "plenary", "date": date, "code": code, "time": (start, end), "room": room, "title": title, "speaker": name_split(speaker), "url": url}
+    elif "PP" in code:
+        # Poster session
+        for talk in page.split("<dt>")[1:]:
+            if "Cancelled" not in talk:
+                talk_id = talk.split("<a href=\"dsp_talk.cfm?p=")[1].split("\"")[0]
+                try:
+                    speaker = talk.split("<dd>")[1].split("<em>")[1].split("</EM>")[0].strip()
+                except:
+                    speaker = talk.split("<dd>")[1].split(",")[0].split(">")[-1].strip()
+                title = talk.split("<strong>")[1].split("</strong>")[0].strip()
+                if title.startswith("-"):
+                    title = title[1:].strip()
+                talks[talk_id] = {"type": "poster", "date": date, "code": code, "time": (start, end), "room": room, "speaker": name_split(speaker), "title": title, "url": url}
     elif "CANCELLED" not in page:
         assert "dsp_talk.cfm" in page
         # minisympsium talks

@@ -52,6 +52,8 @@ def talk_info(talk):
     info += f"{talk['date']} {'&ndash;'.join(talk['time'])}"
     if talk["type"] == "talk":
         info += f" (This is the {nth(talk['n'])} talk in the session)"
+    if talk["type"] == "poster":
+        info += f" (poster session)"
     if talk['room'] is not None:
         info += "<br />"
         info += talk['room']
@@ -99,6 +101,8 @@ for i, n in enumerate(order):
     talks_html += f"<b>{t['time'][0]}&ndash;{t['time'][1]}"
     if "n" in t:
         talks_html += f" ({nth(t['n'])} talk)"
+    if t["type"] == "poster":
+        talks_html += f" </b>(poster)<b>"
     if t["room"] is not None:
         talks_html += f" ({t['room']})"
     talks_html += "</b> "
