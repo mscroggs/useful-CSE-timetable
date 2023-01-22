@@ -35,7 +35,7 @@ jobs:
           git commit -m "Make JSON"
           git remote add origin https://symfembot:${{ secrets.symfembot_token }}@github.com/mscroggs/useful-CSE-timetable.git
           git push -u origin json --force
-        name: Push website to json branch
+        name: Push JSONs to json branch
         if: github.ref == 'refs/heads/main'
 
       - run: |
