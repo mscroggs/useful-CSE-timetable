@@ -29,6 +29,8 @@ def nth(n):
         return f"{n}st"
     if n % 10 == 2 and n % 100 != 12:
         return f"{n}nd"
+    if n % 10 == 3 and n % 100 != 13:
+        return f"{n}rd"
     return f"{n}th"
 
 
