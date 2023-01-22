@@ -24,6 +24,14 @@ def pad2(n):
     return n
 
 
+def nth(n):
+    if n % 10 == 1 and n % 100 != 11:
+        return f"{n}st"
+    if n % 10 == 2 and n % 100 != 12:
+        return f"{n}nd"
+    return f"{n}th"
+
+
 id = 0
 
 
@@ -34,24 +42,19 @@ def talk_info(talk):
     info += f"<span id='bit-{id}' style='display:none'>"
     info += f"<small><a href='javascript:hide_bit({id})'>&#x25B2; Hide talk info &#x25B2;</a></small>"
     info += "<div style='padding:20px'>"
+    info += f"<b>{to_html(talk['title'])}</b>"
+    info += "<br />"
     if talk["type"] == "panel":
-        info += f"<b>{to_html(talk['title'])}</b>"
-        info += "<br />"
         info += to_html(", ".join([" ".join(i) for i in talk["panel"]]))
-        info += "<br />"
-        info += f"{talk['date']} {'&ndash;'.join(talk['time'])}"
-        if talk['room'] is not None:
-            info += "<br />"
-            info += talk['room']
     else:
-        info += f"<b>{to_html(talk['title'])}</b>"
-        info += "<br />"
         info += to_html(" ".join(talk["speaker"]))
+    info += "<br />"
+    info += f"{talk['date']} {'&ndash;'.join(talk['time'])}"
+    if talk["type"] == "talk":
+        info += f" (This is the {nth(talk['n'])} talk in the session)"
+    if talk['room'] is not None:
         info += "<br />"
-        info += f"{talk['date']} {'&ndash;'.join(talk['time'])}"
-        if talk['room'] is not None:
-            info += "<br />"
-            info += talk['room']
+        info += talk['room']
     info += "<br /><br />"
     info += f"<small><a href='{talk['url']}'>More information on the conference website</a></small>"
     info += "</div>"
@@ -88,10 +91,14 @@ for i, n in enumerate(order):
         timestamp += pad2(int(t["time"][0].split(":")[0]) + 12)
     timestamp += ":"
     timestamp += t["time"][0].split(":")[1].split(" ")[0]
+    if "n" in t:
+        timestamp += f" {t['n']}"
 
     talks_html = f"<div id='talk{i}' style='display:none'>"
     talks_html += f"{star(i)} "
     talks_html += f"<b>{t['time'][0]}&ndash;{t['time'][1]}"
+    if "n" in t:
+        talks_html += f" ({nth(t['n'])} talk)"
     if t["room"] is not None:
         talks_html += f" ({t['room']})"
     talks_html += "</b> "

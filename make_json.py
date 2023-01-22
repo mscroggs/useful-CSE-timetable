@@ -88,6 +88,7 @@ for id in sessions:
     elif "CANCELLED" not in page:
         assert "dsp_talk.cfm" in page
         # minisympsium talks
+        talkn = 1
         for talk in page.split("<dt>")[1:]:
             if "Cancelled" not in talk:
                 talk_id = talk.split("<a href=\"dsp_talk.cfm?p=")[1].split("\"")[0]
@@ -98,8 +99,8 @@ for id in sessions:
                 title = talk.split("<strong>")[1].split("</strong>")[0].strip()
                 if title.startswith("-"):
                     title = title[1:].strip()
-                talks[talk_id] = {"type": "talk", "date": date, "code": code, "time": (start, end), "room": room, "speaker": name_split(speaker), "title": title, "url": url}
-
+                talks[talk_id] = {"type": "talk", "date": date, "code": code, "time": (start, end), "room": room, "speaker": name_split(speaker), "title": title, "url": url, "n": talkn}
+                talkn += 1
 with open("talks.json", "w") as f:
     json.dump(talks, f)
 
