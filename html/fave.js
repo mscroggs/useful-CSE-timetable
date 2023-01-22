@@ -55,7 +55,7 @@ function decode(input_str, short) {
             c = input_str.charAt(i)
             if (c == "_") {
                 j = 1
-                while (input_str.charAt(i + j + 1) != "_") {
+                while (i + j + 1 < input_str.length && input_str.charAt(i + j + 1) != "_") {
                     j += 1
                 }
                 var n = input_str.substr(i + 1, j) / 1
