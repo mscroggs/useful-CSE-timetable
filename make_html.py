@@ -60,7 +60,7 @@ def talk_info(talk):
         info += "<br />"
         info += talk['room']
     info += "<br /><br />"
-    info += f"<small><a href='{talk['url']}'>More information on the conference website</a></small>"
+    info += f"<small><a href='{talk['url']}' target='new'>More information on the conference website</a></small>"
     info += "</div>"
     info += "</span>"
     id += 1
