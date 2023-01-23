@@ -5,6 +5,7 @@ from unidecode import unidecode
 
 dir = os.path.dirname(os.path.realpath(__file__))
 source_dir = os.path.join(dir, "html")
+assets_dir = os.path.join(dir, "assets")
 
 if len(sys.argv) == 2:
     target_dir = sys.argv[1]
@@ -176,6 +177,8 @@ def replace(content):
         content = content.replace("{{" + i + "}}", j)
     return content
 
+
+os.system(f"cp {assets_dir}/* {target_dir}")
 
 for file in os.listdir(source_dir):
     if file.startswith("_"):
