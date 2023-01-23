@@ -98,7 +98,7 @@ for i, n in enumerate(order):
     if "n" in t:
         timestamp += f" {t['n']}"
 
-    talks_html = f"<div id='talk{i}' style='display:none'>"
+    talks_html = f"<div class='index-talk' id='talk{i}' style='display:none'>"
     talks_html += f"{star(i)} "
     talks_html += f"<b>{t['time'][0]}&ndash;{t['time'][1]}"
     if "n" in t:
@@ -136,7 +136,7 @@ for i, t in talks.items():
     if "speaker" in t:
         speakers.append([unidecode(", ".join(t["speaker"][::-1])).upper(), " ".join(t["speaker"]), order.index(i), t])
         if speakers[-1][1] == "Matthew Scroggs":
-            scroggs_n = i
+            scroggs_n = f"{order.index(i)}"
             scroggs_star = star(speakers[-1][2])
     elif "panel" in t:
         for person in t["panel"]:
