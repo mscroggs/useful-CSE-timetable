@@ -65,7 +65,7 @@ for id in sessions:
     page = load_page(url)
 
     date = page.split("<h3>")[1].split("</h3>")[0]
-    title = page.split("<h2>")[1].split("</h2>")[0].split("</br>")[1].strip()
+    title = page.split("<h2>")[1].split("</h2>")[0].split("</br>")[1].strip().replace("\u2019", "'")
     code = page.split("<h2>")[1].split("</h2>")[0].split("</br>")[0].strip()
     time = page.split("<p>")[1].split("<br")[0].strip()
     start, end = time.split(" - ")
@@ -109,10 +109,17 @@ for id in sessions:
                     speaker = talk.split("<dd>")[1].split("<em>")[1].split("</EM>")[0].strip()
                 except:
                     speaker = talk.split("<dd>")[1].split(",")[0].split(">")[-1].strip()
-                title = talk.split("<strong>")[1].split("</strong>")[0].strip()
-                if title.startswith("-"):
-                    title = title[1:].strip()
-                talks[talk_id] = {"type": "talk", "date": date, "code": code, "time": (start, end), "room": room, "speaker": name_split(speaker), "title": title, "url": url, "n": talkn}
+                talk_title = talk.split("<strong>")[1].split("</strong>")[0].strip()
+                if talk_title.startswith("-"):
+                    talk_title = talk_title[1:].strip()
+                if talk_title[0] in "012345789":
+                    talk_start = talk_title.split(" ", 1)[0].split("-")[0] + " " + start.split(" ")[1]
+                    talk_end = talk_title.split(" ", 1)[0].split("-")[1] + " " + start.split(" ")[1]
+                    talk_title = talk_title.split(" ", 1)[1]
+                else:
+                    talk_start = start
+                    talk_end = end
+                talks[talk_id] = {"type": "talk", "date": date, "code": code, "time": (talk_start, talk_end), "session-time": (start, end), "room": room, "speaker": name_split(speaker), "title": talk_title, "url": url, "n": talkn, "session-title": title}
                 talkn += 1
 with open("talks.json", "w") as f:
     json.dump(talks, f)
