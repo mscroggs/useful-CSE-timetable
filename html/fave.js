@@ -136,7 +136,7 @@ function toggle_star(n) {
 }
 
 function save_stars() {
-    var faves_str = JSON.stringify(faves)
+    var faves_str = encode(faves, false)
     document.cookie = "faves=" + faves_str + "; expires=Mon, 18 Dec 2023 12:00:00 UTC; path=/"
 }
 
