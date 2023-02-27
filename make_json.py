@@ -13,6 +13,10 @@ if test:
         os.mkdir(cache_dir)
 
 
+def strip_tags(txt):
+    return re.sub(r"<[^>]+>", "", txt)
+
+
 def load_page(url):
     if test:
         fname = re.sub(r"[^A-Za-z0-9_]", "_", url)
@@ -121,7 +125,7 @@ for id in sessions:
                     talk_end = end
                 abstract_url = "https://meetings.siam.org/sess/" + talk.split("abstract")[0].split("<a href=\"")[-1].split("\"")[0]
                 abstract_page = load_page(abstract_url)
-                abstract = abstract_page.split("<div class=\"abstract")[1].split("</strong>")[1].split("</div>")[0].strip()
+                abstract = strip_tags(abstract_page.split("<div class=\"abstract")[1].split("</strong>")[1].split("</div>")[0].strip())
 
                 talks[talk_id] = {"type": "talk", "date": date, "code": code, "time": (talk_start, talk_end), "session-time": (start, end), "room": room, "speaker": name_split(speaker), "title": talk_title, "url": url, "n": talkn, "session-title": title, "abstract": abstract}
                 talkn += 1
