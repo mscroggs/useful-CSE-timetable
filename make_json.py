@@ -119,7 +119,11 @@ for id in sessions:
                 else:
                     talk_start = start
                     talk_end = end
-                talks[talk_id] = {"type": "talk", "date": date, "code": code, "time": (talk_start, talk_end), "session-time": (start, end), "room": room, "speaker": name_split(speaker), "title": talk_title, "url": url, "n": talkn, "session-title": title}
+                abstract_url = "https://meetings.siam.org/sess/" + talk.split("abstract")[0].split("<a href=\"")[-1].split("\"")[0]
+                abstract_page = load_page(abstract_url)
+                abstract = abstract_page.split("<div class=\"abstract")[1].split("</strong>")[1].split("</div>")[0].split("<P>")[0].strip()
+
+                talks[talk_id] = {"type": "talk", "date": date, "code": code, "time": (talk_start, talk_end), "session-time": (start, end), "room": room, "speaker": name_split(speaker), "title": talk_title, "url": url, "n": talkn, "session-title": title, "abstract": abstract}
                 talkn += 1
 with open("talks.json", "w") as f:
     json.dump(talks, f)
