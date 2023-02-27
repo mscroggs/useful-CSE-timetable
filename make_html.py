@@ -36,10 +36,13 @@ def nth(n):
 
 
 id = 0
+sessions = []
+session_talks = {}
 
 
 def talk_info(talk):
     global id
+    global sessions
     info = " "
     info += f"<span id='bitlink-{id}'><small><a href='javascript:show_bit({id})'>&#x25BC; Show talk info &#x25BC;</a></small></span>"
     info += f"<span id='bit-{id}' style='display:none'>"
@@ -54,7 +57,10 @@ def talk_info(talk):
     info += "<br />"
     info += f"{talk['date']} {'&ndash;'.join(talk['time'])}"
     if talk["type"] == "talk":
-        info += f"<br />This is the {nth(talk['n'])} talk in <em>{talk['session-title']}</em> ({'&ndash;'.join(talk['session-time'])})"
+        if talk['session-title'] not in sessions:
+            sessions.append(talk['session-title'])
+            session_talks[talk['session-title']] = []
+        info += f"<br />This is the {nth(talk['n'])} talk in <a href='session-{sessions.index(talk['session-title'])}.html'>{talk['session-title']}</a> ({'&ndash;'.join(talk['session-time'])})"
     if talk["type"] == "poster":
         info += " (poster session)"
     if talk['room'] is not None:
@@ -114,6 +120,10 @@ for i, n in enumerate(order):
         talks_html += to_html(f"{t['speaker'][0]} {t['speaker'][1]}, {t['title']}")
     talks_html += talk_info(t)
     talks_html += "</div>"
+
+    if t["type"] == "talk":
+        session_talks[t['session-title']].append((timestamp, talks_html))
+
 
     talks_list.append((timestamp, talks_html))
 
@@ -194,3 +204,11 @@ for file in os.listdir(source_dir):
 
         with open(os.path.join(target_dir, file), "w") as f:
             f.write(content)
+
+with open(os.path.join(source_dir, "_session.html")) as f:
+    stemplate = f.read()
+
+for i, session in enumerate(sessions):
+    session_talks[session].sort(key=lambda s: s[0])
+    with open(os.path.join(target_dir, f"session-{i}.html"), "w") as f:
+        f.write(replace(stemplate.replace("{{SESSION}}", f"<h2>{session}</h2>" + "".join([t[1].replace("display:none", "display:block", 1) for t in session_talks[session]]))))
