@@ -93,7 +93,6 @@ for (var i = 0; i < cookies.length; i++) {
     if (cookies[i].split("=")[0].trim() == "faves") {
         var cookiedata = cookies[i].split("=")[1]
         if (cookiedata.charAt(0) == "[") {
-        faves = decode(cookiedata, false)
             faves = JSON.parse(cookiedata)
         } else {
             // Legacy load
