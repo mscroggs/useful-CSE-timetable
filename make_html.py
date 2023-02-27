@@ -61,6 +61,9 @@ def talk_info(talk):
         info += "<br />"
         info += talk['room']
     info += "<br /><br />"
+    if talk["type"] == "talk":
+        info += f"<small>{talk['abstract']}</small>"
+        info += "<br /><br />"
     info += f"<small><a href='{talk['url']}' target='new'>More information on the conference website</a></small>"
     info += "</div>"
     info += "</span>"

@@ -92,12 +92,7 @@ var cookies = document.cookie.split(";")
 for (var i = 0; i < cookies.length; i++) {
     if (cookies[i].split("=")[0].trim() == "faves") {
         var cookiedata = cookies[i].split("=")[1]
-        if (cookiedata.charAt(0) == "[") {
-            faves = JSON.parse(cookiedata)
-        } else {
-            // Legacy load
-            faves = decode(cookiedata, false)
-        }
+        faves = decode(cookiedata, false)
     }
 }
 
@@ -136,7 +131,7 @@ function toggle_star(n) {
 }
 
 function save_stars() {
-    var faves_str = JSON.stringify(faves)
+    var faves_str = encode(faves, false)
     document.cookie = "faves=" + faves_str + "; expires=Mon, 18 Dec 2023 12:00:00 UTC; path=/"
 }
 
