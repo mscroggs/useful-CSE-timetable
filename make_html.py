@@ -124,7 +124,6 @@ for i, n in enumerate(order):
     if t["type"] == "talk":
         session_talks[t['session-title']].append((timestamp, talks_html))
 
-
     talks_list.append((timestamp, talks_html))
 
 talks_list.sort(key=lambda x: x[0])
