@@ -1,0 +1,53 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Progresses on Batched Linear Solver Algorithms - Part II of II</h2><div class='index-talk' id='talk1266' style='display:block'><a href='javascript:toggle_star(1266)' class='star'><span class='star1266'>&star;</span></a> <b>4:45 PM&ndash;5:00 PM (G107)</b> Sarah Osborn, Leveraging Batched Kernels in Hypre <span id='bitlink-1171'><small><a href='javascript:show_bit(1171)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1171' style='display:none'><small><a href='javascript:hide_bit(1171)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Leveraging Batched Kernels in Hypre</b><br />Sarah Osborn<br />Thursday, March 2 4:45 PM&ndash;5:00 PM<br />This is the 1st talk in <a href='session-278.html'>Progresses on Batched Linear Solver Algorithms - Part II of II</a> (4:45 PM&ndash;6:25 PM)<br />G107<br /><br /><small>The need for batched kernels has emerged to make more efficient use of GPUs for many small and sparse linear algebra problems. This talk will discuss some of our recent efforts in utilizing batched kernels within the hypre linear solver library to improve performance and make effective use of existing and emerging hardware. Numerical results will be presented to demonstrate potential performance improvements when using batched kernels within algebraic multigrid solvers and preconditioners with modern hardware accelerators.     
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75626' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1267' style='display:block'><a href='javascript:toggle_star(1267)' class='star'><span class='star1267'>&star;</span></a> <b>5:05 PM&ndash;5:20 PM (G107)</b> Paul Lin, Batched Sparse Iterative Solvers on GPU for the XGC Fusion Plasma Application Collision Operator <span id='bitlink-1172'><small><a href='javascript:show_bit(1172)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1172' style='display:none'><small><a href='javascript:hide_bit(1172)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Batched Sparse Iterative Solvers on GPU for the XGC Fusion Plasma Application Collision Operator</b><br />Paul Lin<br />Thursday, March 2 5:05 PM&ndash;5:20 PM<br />This is the 2nd talk in <a href='session-278.html'>Progresses on Batched Linear Solver Algorithms - Part II of II</a> (4:45 PM&ndash;6:25 PM)<br />G107<br /><br /><small>Batched linear solvers, which are employed to solve many small related but independent problems, are important for several applications.  This is particularly the case for accelerators such as graphics processing units (GPUs), which require a substantial amount of work to keep them operating efficiently and solving smaller problems one after another would be highly inefficient. An example use case is found in the XGC gyrokinetic particle-in-cell (PIC) code used for modeling magnetically confined fusion plasma devices.  The collision operator employs a LAPACK linear solver, which does not run on a GPU, for current production runs.  As these matrices are well-conditioned, batched iterative sparse solvers are an attractive option.  A proxy application has been created for facilitating optimizations and porting of the collision operator to GPUs.  We describe how Ginkgo's batched solver can be integrated into the collision kernel and accelerate the simulation process. Comparisons for the solve times on NVIDIA V100 and A100 GPUs and AMD MI100 GPUs with a CPU node  are presented for matrices from the collision kernel of XGC. The results suggest that Ginkgo's batched sparse iterative solvers are well suited for efficient utilization of the GPU for this problem, and the performance portability of Ginkgo in conjunction with Kokkos (used within XGC as the heterogeneous programming model) allows seamless execution for exascale oriented heterogeneous architectures.    
+    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75626' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1268' style='display:block'><a href='javascript:toggle_star(1268)' class='star'><span class='star1268'>&star;</span></a> <b>5:25 PM&ndash;5:40 PM (G107)</b> Mark Adams, Portable Batch Solvers in Structure Preserving Kinetic Methods with PETSc <span id='bitlink-1173'><small><a href='javascript:show_bit(1173)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1173' style='display:none'><small><a href='javascript:hide_bit(1173)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Portable Batch Solvers in Structure Preserving Kinetic Methods with PETSc</b><br />Mark Adams<br />Thursday, March 2 5:25 PM&ndash;5:40 PM<br />This is the 3rd talk in <a href='session-278.html'>Progresses on Batched Linear Solver Algorithms - Part II of II</a> (4:45 PM&ndash;6:25 PM)<br />G107<br /><br /><small>I will introduce our integrated program for both developing structure-preserving (SP) methods for kinetic applications and deploying these methods as high-performance tools in PETSc (Portable, Extensible, Toolkit for Scientific computing). The metriplectic formalism used to develop these methods is introduced. We briefly discuss several methods developed for this code: a mixed Poisson solver for a $C^0$ electric field; strictly conservative mapping between particle and finite element bases; monotonic entropy time integrators for collisions; and new particle based Landau collision operators.    
+A mature, high-order accurate, finite element based Landau collision operator with adaptive mesh refinement, that has been optimized for accelerator architectures using the portable Kokkos programming language, is presented with results using the NVIDIA A100 and AMD MI250X architectures. We present verification studies using plasma resistivity and compare with Spitzer resistivity. New batch GPU linear solvers have been developed for this work. This work is integrated into the PETSc &#8220;solver" framework to provide a fully GPU implicit time advance of the Landau collision operator. We show that collision time advance with many species is practical for 3X + 2V models of tokamaks on today’s large-scale computers in cylindrical coordinates and that fully 3V models should be feasible in the near future.    
+    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75626' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Nonlinear Preconditioning</h2><div class='index-talk' id='talk1479' style='display:block'><a href='javascript:toggle_star(1479)' class='star'><span class='star1479'>&star;</span></a> <b>9:20 AM&ndash;9:35 AM (D406)</b> Martin Lanser, Adaptive Nonlinear Domain Decomposition Methods <span id='bitlink-1361'><small><a href='javascript:show_bit(1361)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1361' style='display:none'><small><a href='javascript:hide_bit(1361)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Adaptive Nonlinear Domain Decomposition Methods</b><br />Martin Lanser<br />Friday, March 3 9:20 AM&ndash;9:35 AM<br />This is the 1st talk in <a href='session-326.html'>Nonlinear Preconditioning</a> (9:20 AM&ndash;11:00 AM)<br />D406<br /><br /><small>Highly scalable and robust Newton-Krylov domain decomposition approaches are widely used for the solution of nonlinear implicit problems. In these methods, the nonlinear problem is first linearized and afterwards decomposed into subdomains. By changing this order, that is, by first decomposing the nonlinear problem, many nonlinear domain decomposition methods have been designed in the last decades. These methods often show a higher robustness and a faster nonlinear convergence compared with classical Newton-Krylov variants. In this talk, Nonlinear-FETI-DP (Finite Element Tearing and Interconnecting - Dual Primal) will be discussed. Here, the choice of the nonlinear elimination set, that is, the set of degrees of freedom which are eliminated in a nonlinear fashion, and the choice of the coarse space have a huge impact on the nonlinear and linear convergence behavior. In this talk, we will show new results combining recently developed approaches for the adaptive choice of the nonlinear elimination set with adaptive coarse spaces.    
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75729' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1481' style='display:block'><a href='javascript:toggle_star(1481)' class='star'><span class='star1481'>&star;</span></a> <b>9:40 AM&ndash;9:55 AM (D406)</b> Hardik Kothari, A Nonlinear Preconditioning Strategy for Solving Phase-Field Fracture Problems <span id='bitlink-1362'><small><a href='javascript:show_bit(1362)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1362' style='display:none'><small><a href='javascript:hide_bit(1362)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>A Nonlinear Preconditioning Strategy for Solving Phase-Field Fracture Problems</b><br />Hardik Kothari<br />Friday, March 3 9:40 AM&ndash;9:55 AM<br />This is the 2nd talk in <a href='session-326.html'>Nonlinear Preconditioning</a> (9:20 AM&ndash;11:00 AM)<br />D406<br /><br /><small>One of the state-of-the-art methodologies to model crack propagation is the phase-field approach.  In this approach, a new variable called phase-field is introduced which characterizes the state of the material from intact to fully broken.  Modeling such problems is computationally challenging due to the highly nonlinear, non-convex, and non-smooth nature of the underlying energy function.  In this work, we aim to solve such problems, from the perspective of the optimization methods.  We propose to solve the arising nonlinear problems efficiently using the domain decomposition methods.  For the domain decomposition approach, we take advantage of the field-split method to decouple the problem into two sets that are related to the displacement and the damage variable.  This spit allows us to take advantage of the additive and multiplicative variants of the Schwarz preconditioned inexact Newton (ASPIN/MSPIN) method to solve the nonlinear system.  In this work, we will demonstrate the convergence behavior of the proposed solution strategies using several benchmark problems, and also discuss an approach to handle the variational inequalities.  We will also compare these methods with the widely-used alternate minimization method and show the benefits of our solution schemes.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75729' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1482' style='display:block'><a href='javascript:toggle_star(1482)' class='star'><span class='star1482'>&star;</span></a> <b>10:00 AM&ndash;10:15 AM (D406)</b> &#216;ystein Klemetsdal, Adaptive Nonlinear Domain Decomposition Preconditioning Strategies for Robust and Efficient Simulation of Field-Scale Subsurface Flow <span id='bitlink-1363'><small><a href='javascript:show_bit(1363)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1363' style='display:none'><small><a href='javascript:hide_bit(1363)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Adaptive Nonlinear Domain Decomposition Preconditioning Strategies for Robust and Efficient Simulation of Field-Scale Subsurface Flow</b><br />&#216;ystein Klemetsdal<br />Friday, March 3 10:00 AM&ndash;10:15 AM<br />This is the 3rd talk in <a href='session-326.html'>Nonlinear Preconditioning</a> (9:20 AM&ndash;11:00 AM)<br />D406<br /><br /><small>Macro-scale models of subsurface flow are usually simulated using implicit methods, which lead to large, stiff, and strongly coupled systems of discrete nonlinear equations. Newton-type methods work well as long as the coupling/nonlinearity is balanced in space, but may end up wasting a lot of computational effort when the dominant nonlinearity is localized. A better alternative is then to use a nonlinear domain-decomposition preconditioning strategy (e.g., ASPIN) that first resolves challenging nonlinearities in a local stage before accounting for long-range iterations in a global, Newton-like stage. This improves robustness to time-step sizes and initial guess but also introduces higher computational cost per global iteration compared with standard Newton. In this talk, we will discuss methods to hybridize the two approaches, so that standard Newton is used when this method converges well, with an adaptive switch to ASPIN when faced with severe local nonlinearities. We demonstrate the efficacy of the hybrid method on examples carefully designed to stress-test the nonlinear solver as well as on real, industrial simulation models.     </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75729' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

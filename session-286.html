@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>SYCL's Impact on Algorithms, Data Structures and Implementations - Part II of II</h2><div class='index-talk' id='talk1296' style='display:block'><a href='javascript:toggle_star(1296)' class='star'><span class='star1296'>&star;</span></a> <b>1:50 PM&ndash;2:05 PM (G104)</b> Daniel Arndt, Implementing a SYCL Backend for Kokkos <span id='bitlink-1197'><small><a href='javascript:show_bit(1197)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1197' style='display:none'><small><a href='javascript:hide_bit(1197)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Implementing a SYCL Backend for Kokkos</b><br />Daniel Arndt<br />Monday, February 27 1:50 PM&ndash;2:05 PM<br />This is the 1st talk in <a href='session-286.html'>SYCL's Impact on Algorithms, Data Structures and Implementations - Part II of II</a> (1:50 PM&ndash;3:30 PM)<br />G104<br /><br /><small>Aurora, to be deployed at Argonne National Laboratory, is expected to be the next exascale computer in the United States. Just as with Frontier, the first exascale computer at Oak Ridge National Laboratory, Aurora's main performance will come from GPUs by a new vendor. Kokkos' (main) choice for supporting these GPUs developed by Intel is leveraging DPC++, Intel's implementation of the SYCL standard.  In this talk, I discuss my experience while developing a SYCL backend for Kokkos and issues applications using this backend encounter. In particular, I will compare features that work better or worse in Kokkos than with the HIP or CUDA backend.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75642' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk2070' style='display:block'><a href='javascript:toggle_star(2070)' class='star'><span class='star2070'>&star;</span></a> <b>2:10 PM&ndash;2:25 PM (G104)</b> Tobias Weinzierl, Flavours of GPU Kernels in ExaHyPE <span id='bitlink-1895'><small><a href='javascript:show_bit(1895)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1895' style='display:none'><small><a href='javascript:hide_bit(1895)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Flavours of GPU Kernels in ExaHyPE</b><br />Tobias Weinzierl<br />Monday, February 27 2:10 PM&ndash;2:25 PM<br />This is the 2nd talk in <a href='session-286.html'>SYCL's Impact on Algorithms, Data Structures and Implementations - Part II of II</a> (1:50 PM&ndash;3:30 PM)<br />G104<br /><br /><small>ExaHyPE is an engine to solve hyperbolic PDEs in first order formulation over dynamically adaptive meshes.  The code supports classic non-overlapping domain decomposition supplemented by tasks.  At runtime, ExaHyPE assembles batches of tasks and deploys them to GPUs.  For various numerical schemes, we offer various generic, i.e. PDE-independent GPU kernels.  By default, they rely on OpenMP GPU offloading.  This talk reflects on our recent endeavour how to translate these OpenMP kernels into SYCL.  Some concepts from the OpenMP world translate one-to-one, while others cannot directly be mapped onto SYCL.  In return, SYCL streamlines the realisation of certain flavours of GPU kernels which are technically challenging in OpenMP.  The two paradigms require a rethink of the kernel realisations.    
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75642' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1298' style='display:block'><a href='javascript:toggle_star(1298)' class='star'><span class='star1298'>&star;</span></a> <b>2:30 PM&ndash;2:45 PM (G104)</b> Will R. Saunders, Exploration of Performance-Portability in the ExCALIBUR Fusion Use Case <span id='bitlink-1198'><small><a href='javascript:show_bit(1198)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1198' style='display:none'><small><a href='javascript:hide_bit(1198)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Exploration of Performance-Portability in the ExCALIBUR Fusion Use Case</b><br />Will R. Saunders<br />Monday, February 27 2:30 PM&ndash;2:45 PM<br />This is the 3rd talk in <a href='session-286.html'>SYCL's Impact on Algorithms, Data Structures and Implementations - Part II of II</a> (1:50 PM&ndash;3:30 PM)<br />G104<br /><br /><small>Project NEPTUNE approaches one of the grand challenge problems in fusion - modelling plasma in the edge region of a tokamak. In this edge region, hot plasma interfaces with the reactor wall and cold neutral gas resulting in a computationally expensive multi-scale problem that is considered an exascale challenge. For the fusion community it is highly desirable to implement the computational methods that simulate this multi-scale model in a performance-portable manner.    
+The NESO (Neptune Exploratory SOftware) implementation is an intermediate project to evaluate the suitability and performance of proposed techniques and algorithms for NEPTUNE. As part of NESO we are evaluating SYCL as a performance-portable language to target multiple hardware architectures. In this talk we present how SYCL is used in the NESO project and our proposed approach for sustaining performance across different hardware architectures in the fusion use case.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75642' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1299' style='display:block'><a href='javascript:toggle_star(1299)' class='star'><span class='star1299'>&star;</span></a> <b>2:50 PM&ndash;3:05 PM (G104)</b> Nisha Patel, Intel Developer Tools for Serious SYCL <span id='bitlink-1199'><small><a href='javascript:show_bit(1199)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1199' style='display:none'><small><a href='javascript:hide_bit(1199)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Intel Developer Tools for Serious SYCL</b><br />Nisha Patel<br />Monday, February 27 2:50 PM&ndash;3:05 PM<br />This is the 4th talk in <a href='session-286.html'>SYCL's Impact on Algorithms, Data Structures and Implementations - Part II of II</a> (1:50 PM&ndash;3:30 PM)<br />G104<br /><br /><small>Intel with it's oneAPI developer suite brings in compatibility and ease of use on the table. In this session we shall explore how Intel is collaborating with open source communities from compilers to productivity tools, promoting SYCL to standardize interfaces over multiple HW vendors and vision for parallel programming.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75642' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

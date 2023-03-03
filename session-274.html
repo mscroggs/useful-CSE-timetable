@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>New Algorithmic Developments for Heterogeneous Computing Environments - Part I of II</h2><div class='index-talk' id='talk1248' style='display:block'><a href='javascript:toggle_star(1248)' class='star'><span class='star1248'>&star;</span></a> <b>9:20 AM&ndash;9:35 AM (D402)</b> Lucas Erlandson, Handling Corruption in CG and S-Approximate Conjugate Directions <span id='bitlink-1154'><small><a href='javascript:show_bit(1154)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1154' style='display:none'><small><a href='javascript:hide_bit(1154)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Handling Corruption in CG and S-Approximate Conjugate Directions</b><br />Lucas Erlandson<br />Friday, March 3 9:20 AM&ndash;9:35 AM<br />This is the 1st talk in <a href='session-274.html'>New Algorithmic Developments for Heterogeneous Computing Environments - Part I of II</a> (9:20 AM&ndash;11:00 AM)<br />D402<br /><br /><small>Solves are a critical operation used in applications ranging from machine learning to simulations. As computational architectures continue to diversify, particularly with increased parallelization, highly asynchronous solvers are required. Furthermore, a need arises for fault tolerant methods that can natively handle unreliability present in these new environments. However, for linear systems, few asynchronous methods have been the focus of Algorithm Based Fault Tolerance– including a robust Push-Sum algorithm, a robust Alternating Directions Method of Multipliers, and Asynchronous Jacobi. In this presentation, we motivate the need for handling corruption in the Conjugate Gradient Method (CG) and an asynchronous method based on CG known as s-Approximate Conjugate Directions (s-ACD). S-ACD aims to leverage the power of CG through local orthogonality constraints while using Conjugate Directions globally to reduce synchronization points and the s-step framework to further reduce communication. This presentation investigates various corruption schemes, including corruption during communication. We demonstrate how the analogs of the orthogonality constraints evolve during the solves and corruption. Using these metrics, we propose a detection scheme, and motivate correction schemes. Finally, we demonstrate the effectiveness of these methods through numerical experiments.    
+Prepared by LLNL under Contract DE-AC52-07NA27344. Funded by LLNL LDRD project 22-ERD-045. LLNL-ABS-840243  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75620' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1249' style='display:block'><a href='javascript:toggle_star(1249)' class='star'><span class='star1249'>&star;</span></a> <b>9:40 AM&ndash;9:55 AM (D402)</b> Andrew J. Higgins, Optimal Size of the Block in Block GMRES on GPUs: Computational Model and Experiments <span id='bitlink-1155'><small><a href='javascript:show_bit(1155)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1155' style='display:none'><small><a href='javascript:hide_bit(1155)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Optimal Size of the Block in Block GMRES on GPUs: Computational Model and Experiments</b><br />Andrew J. Higgins<br />Friday, March 3 9:40 AM&ndash;9:55 AM<br />This is the 2nd talk in <a href='session-274.html'>New Algorithmic Developments for Heterogeneous Computing Environments - Part I of II</a> (9:20 AM&ndash;11:00 AM)<br />D402<br /><br /><small>The block version of GMRES (BGMRES) is most advantageous over the single right hand side (RHS) counterpart when the cost of communication is high while the cost of floating point operations is not. This is the case on modern Graphics Processing Units (GPUs), while it is generally not the case on traditional Central Processing Units (CPUs). In this talk, experiments on both GPUs and CPUs are shown that compare the performance of BGMRES against GMRES as the number of RHS increases. The experiments indicate that there are many cases in which BGMRES is slower than GMRES on CPUs, but faster on GPUs. Furthermore, when varying the number of RHS on the GPU, there is an optimal number of RHS where BGMRES is clearly most advantageous over GMRES. A computational model is developed using hardware specific parameters, showing qualitatively where this optimal number of RHS is, and this model also helps explain the phenomena observed in the experiments.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75620' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+<span id='info'></span>
+To copy your favourites to another device, visit this url on that device:<br />
+<input type='text' id='encoded' length=7> <button onclick='copy_to_clipboard()'>Copy URL</button>
+
+<script type='text/javascript'>
+var c = window.location.search.substring(1)
+if (c != "") {
+    faves = decode(c, true)
+    save_stars()
+    document.getElementById("info").innerHTML = "Successfully updated favourited talks.<br /><br />"
+    document.getElementById("info").style.color = "#00A300"
+}
+document.getElementById("encoded").value = "https://mscroggs.github.io/useful-CSE-timetable/sync.html?" + encode(faves, true)
+function copy_to_clipboard(){
+    var c = document.getElementById('encoded')
+    c.select()
+    c.setSelectionRange(0, 99999)
+    navigator.clipboard.writeText(c.value);
+}
+</script>
+<script type='text/javascript'>
+update_stars()
+</script>
+
+</body>
+</html>

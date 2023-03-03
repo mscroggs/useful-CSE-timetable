@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Randomized Solvers in Large-Scale Scientific Computing - Part II of II</h2><div class='index-talk' id='talk1637' style='display:block'><a href='javascript:toggle_star(1637)' class='star'><span class='star1637'>&star;</span></a> <b>2:15 PM&ndash;2:30 PM (G111)</b> Christos Boutsikas, Mixed-Precision Randomized Solution of Least Squares Problems <span id='bitlink-1502'><small><a href='javascript:show_bit(1502)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1502' style='display:none'><small><a href='javascript:hide_bit(1502)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Mixed-Precision Randomized Solution of Least Squares Problems</b><br />Christos Boutsikas<br />Tuesday, February 28 2:15 PM&ndash;2:30 PM<br />This is the 1st talk in <a href='session-362.html'>Randomized Solvers in Large-Scale Scientific Computing - Part II of II</a> (2:15 PM&ndash;3:55 PM)<br />G111<br /><br /><small>We consider the preconditioned solution of least squares problems, where a randomized preconditioner is computed in lower precision. The idea is to reduce the amount of sampling by demoting the randomization to lower precision. For a tall and skinny mxn matrix,  o(n) samples produce a randomized preconditioner that is highly ill-conditioned in double precision, but much better conditioned after demotion to single precision. From a deterministic perturbation perspective, we present lower bounds for the smallest singular values that explain the singular value increase in lower precision. These are genuine lower bounds, in contrast to existing expressions which hold only to first and second order. From a probabilistic perspective, we model perturbations as independent, bounded random variables, and present expressions for the expectation of the small singular values. Numerical experiments corroborate the effectiveness of the preconditioners.    
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75796' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1638' style='display:block'><a href='javascript:toggle_star(1638)' class='star'><span class='star1638'>&star;</span></a> <b>2:35 PM&ndash;2:50 PM (G111)</b> Maike Meier, Randomized Algorithms for Tikhonov Regularization in Linear Least Squares <span id='bitlink-1503'><small><a href='javascript:show_bit(1503)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1503' style='display:none'><small><a href='javascript:hide_bit(1503)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Randomized Algorithms for Tikhonov Regularization in Linear Least Squares</b><br />Maike Meier<br />Tuesday, February 28 2:35 PM&ndash;2:50 PM<br />This is the 2nd talk in <a href='session-362.html'>Randomized Solvers in Large-Scale Scientific Computing - Part II of II</a> (2:15 PM&ndash;3:55 PM)<br />G111<br /><br /><small>We describe three randomized algorithms to efficiently solve regularized linear least squares systems based on sketching.  The algorithms compute preconditioners for $\min \Vert Ax-b\Vert ^2_2 + \lambda \Vert x\Vert ^2_2$, where $A\in\mathbb{R}^{m\times n}$  and $\lambda>0$ is a regularization parameter, such that LSQR converges in $\mathcal{O}(\log(1/\epsilon))$ iterations for $\epsilon$ accuracy. We focus on the context where the optimal regularization parameter is unknown, and the system must be solved for a number of parameters $\lambda$. Our algorithms are applicable in both the underdetermined $m\ll n$ and the overdetermined $m\gg n$ setting. Our algorithms efficiently update preconditioners for new regularization parameters. We introduce an algorithm specifically for an approximately low-rank setting, in which the matrix $A$ has rapidly decreasing singular values and such the problem is of low statistical dimension. The scheme we propose exploits the low statistical dimension while not requiring the computation of the Gram matrix, resulting in a more stable scheme than existing algorithms in this context.   </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75796' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1639' style='display:block'><a href='javascript:toggle_star(1639)' class='star'><span class='star1639'>&star;</span></a> <b>2:55 PM&ndash;3:10 PM (G111)</b> Tianyi Shi, On the Parallelization of Sketching Algorithms for the Tensor-Train Decomposition <span id='bitlink-1504'><small><a href='javascript:show_bit(1504)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1504' style='display:none'><small><a href='javascript:hide_bit(1504)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>On the Parallelization of Sketching Algorithms for the Tensor-Train Decomposition</b><br />Tianyi Shi<br />Tuesday, February 28 2:55 PM&ndash;3:10 PM<br />This is the 3rd talk in <a href='session-362.html'>Randomized Solvers in Large-Scale Scientific Computing - Part II of II</a> (2:15 PM&ndash;3:55 PM)<br />G111<br /><br /><small>In this talk, we propose TT-Sketching, a new parallelizable tensor-train decomposition algorithm for streaming tensor data. We introduce a couple of variants of this algorithm for computation and storage efficiency. For these variants, we provide theoretical guarantees of accuracy, parallel implementation details using message passing interface (MPI), and scaling analysis. Strong scaling results on different tensors suggest that TT-Sketching is better than its serial counterpart, and scales well with the number of computing cores.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75796' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1640' style='display:block'><a href='javascript:toggle_star(1640)' class='star'><span class='star1640'>&star;</span></a> <b>3:15 PM&ndash;3:30 PM (G111)</b> Paul Cazeaux, Randomized Algorithms for Rounding in the Tensor-Train Format <span id='bitlink-1505'><small><a href='javascript:show_bit(1505)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1505' style='display:none'><small><a href='javascript:hide_bit(1505)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Randomized Algorithms for Rounding in the Tensor-Train Format</b><br />Paul Cazeaux<br />Tuesday, February 28 3:15 PM&ndash;3:30 PM<br />This is the 4th talk in <a href='session-362.html'>Randomized Solvers in Large-Scale Scientific Computing - Part II of II</a> (2:15 PM&ndash;3:55 PM)<br />G111<br /><br /><small>The Tensor-Train (TT) format is a highly compact low-rank representation for high-dimensional tensors. The fundamental operation used to maintain feasible memory and computational time is called rounding, which truncates the internal ranks of a tensor already in TT format. We propose several randomized algorithms for this task that are generalizations of randomized low-rank matrix approximation algorithms and provide significant reduction in computation compared to deterministic TT-rounding algorithms. Randomization is particularly effective in the case of rounding a sum of TT-tensors (where we observe $20\times$ speedup), which is the bottleneck computation in the adaptation of GMRES to vectors in TT format. We present the randomized algorithms and compare their empirical accuracy and computational time with deterministic alternatives.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75796' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

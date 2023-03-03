@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Variational Inference: From Theory to Practice - Part II of II</h2><div class='index-talk' id='talk2075' style='display:block'><a href='javascript:toggle_star(2075)' class='star'><span class='star2075'>&star;</span></a> <b>9:20 AM&ndash;9:35 AM (D301)</b> Alexandra Hotti, The benefits of mixtures in black-box variational inference and a step towards their convergence guarantees <span id='bitlink-1900'><small><a href='javascript:show_bit(1900)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1900' style='display:none'><small><a href='javascript:hide_bit(1900)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>The benefits of mixtures in black-box variational inference and a step towards their convergence guarantees</b><br />Alexandra Hotti<br />Friday, March 3 9:20 AM&ndash;9:35 AM<br />This is the 1st talk in <a href='session-370.html'>Variational Inference: From Theory to Practice - Part II of II</a> (9:20 AM&ndash;11:00 AM)<br />D301<br /><br /><small>Gaussian mixture distributions can be used as variational posteriors to obtain a more flexible variational approximation. We show how the mixture components cooperate when they jointly adapt to maximize the ELBO.  We build upon recent advances in the multiple and adaptive importance sampling literature. We then model the mixture components using separate encoder networks and show empirically that the ELBO is monotonically non-decreasing as a function of the number of mixture components. These results hold for a range of different VAE architectures on the MNIST, FashionMNIST, and CIFAR-10 datasets. On these datasets, we show that mixtures can achieve better test set log-likelihood values compare to other state-of-the-art methods for obtaining a more flexible variational posterior, namely normalizing flows, hierarchical models and the VampPrior.    
+These results empirically show that GMMs can perform well. However, to be certain that GMMs always work, we would need convergence guarantees. Convergence guarantees commonly utilize convexity or smoothness. However, the ELBO with a GMM  variational posterior is not, in general, convex. Also, we show that the GMM entropy term in the corresponding ELBO objective is, in general, not Lipschitz smooth, making the ELBO non-smooth. However, we investigate under which assumptions the ELBO is smooth. First, by leveraging previous smoothness results, we prove that the energy term in the ELBO is smooth for a uniformly-weighted mixture of location-scale family distributions. Then, by lower bounding the variance parameters, as is common in VI in practice, we then show that the corresponding ELBO objective is Lipschitz smooth for a uniformly weighted GMM.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75808' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1673' style='display:block'><a href='javascript:toggle_star(1673)' class='star'><span class='star1673'>&star;</span></a> <b>9:40 AM&ndash;9:55 AM (D301)</b> Tommie Catanach, Posterior Predictive Variational Inference for Uncertainty Quantification in Machine Learning <span id='bitlink-1533'><small><a href='javascript:show_bit(1533)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1533' style='display:none'><small><a href='javascript:hide_bit(1533)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Posterior Predictive Variational Inference for Uncertainty Quantification in Machine Learning</b><br />Tommie Catanach<br />Friday, March 3 9:40 AM&ndash;9:55 AM<br />This is the 2nd talk in <a href='session-370.html'>Variational Inference: From Theory to Practice - Part II of II</a> (9:20 AM&ndash;11:00 AM)<br />D301<br /><br /><small>Machine Learning (ML) is increasingly becoming an integral part of the computational science and engineering (CSE) toolkit, yet the rigor of uncertainty quantification (UQ) for ML has not kept pace with its utilization. Bayesian inference provides a principled framework for UQ, yet ML models like Deep Neural Networks (DNNs) challenge many traditional inference algorithms. This has motivated the use of approximate Bayesian inference methods like Variational Inference (VI) within ML. While VI has significant computational advantages over traditional algorithms like Markov Chain Monte Carlo, many challenges remain with VI for Bayesian UQ in ML such as the robustness of UQ to often ad hoc assumptions of variational family and prior distribution.       
+We seek to mitigate some of these deficiencies by taking a goal-oriented approach. Our approach, Posterior Predictive Variational Inference (PPVI) seeks to optimize VI to make specific predictions. This means that uncertainty is optimally represented to answer specific questions at hand. This makes UQ more accurate for these specified quantities of interest and makes it easier to understand the robustness of these methods to assumptions. We will present theory, algorithms, and illustrative examples for PPVI to describe its utility to CSE.     </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75808' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1674' style='display:block'><a href='javascript:toggle_star(1674)' class='star'><span class='star1674'>&star;</span></a> <b>10:00 AM&ndash;10:15 AM (D301)</b> Adam Foster, Variational Bayesian Optimal Experimental Design <span id='bitlink-1534'><small><a href='javascript:show_bit(1534)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1534' style='display:none'><small><a href='javascript:hide_bit(1534)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Variational Bayesian Optimal Experimental Design</b><br />Adam Foster<br />Friday, March 3 10:00 AM&ndash;10:15 AM<br />This is the 3rd talk in <a href='session-370.html'>Variational Inference: From Theory to Practice - Part II of II</a> (9:20 AM&ndash;11:00 AM)<br />D301<br /><br /><small> </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75808' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

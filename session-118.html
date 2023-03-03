@@ -1,0 +1,55 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Kinetic and Continuum Theories for Computational Plasma Physics - Part I of II</h2><div class='index-talk' id='talk540' style='display:block'><a href='javascript:toggle_star(540)' class='star'><span class='star540'>&star;</span></a> <b>9:20 AM&ndash;9:35 AM (G102)</b> Daniel Finn, Electrostatic Solves for Plasma Physics Using PETSc-PIC <span id='bitlink-499'><small><a href='javascript:show_bit(499)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-499' style='display:none'><small><a href='javascript:hide_bit(499)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Electrostatic Solves for Plasma Physics Using PETSc-PIC</b><br />Daniel Finn<br />Friday, March 3 9:20 AM&ndash;9:35 AM<br />This is the 1st talk in <a href='session-118.html'>Kinetic and Continuum Theories for Computational Plasma Physics - Part I of II</a> (9:20 AM&ndash;11:00 AM)<br />G102<br /><br /><small>We present a PETSc based particle-in-cell (PIC) method for studying electrostatic plasmas.  The PETSC-PIC algorithm is a highly scalable method, with multigrid capabilities, for solving the Vlasov-Poisson equations.  In the PETSc-PIC algorithm, the Vlasov equation is solved using a particle representation while a continuum representation is employed for the Poisson solve.  We implement our PETSc-PIC method on two example systems: two stream instability and Landau damping.  These systems are standard tests in plasma physics and provide a baseline to show the effectiveness and correctness of our methodology.  Furthermore, we compare the implementation of the traditional Poisson equation with H\textsuperscript{1} finite elements to a mixed form Poisson method with H\textsuperscript{div} finite elements.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75404' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk541' style='display:block'><a href='javascript:toggle_star(541)' class='star'><span class='star541'>&star;</span></a> <b>9:40 AM&ndash;9:55 AM (G102)</b> Margherita Guido, Subspace Acceleration Method for Simulation of Plasma in Tokamak Boundary <span id='bitlink-500'><small><a href='javascript:show_bit(500)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-500' style='display:none'><small><a href='javascript:hide_bit(500)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Subspace Acceleration Method for Simulation of Plasma in Tokamak Boundary</b><br />Margherita Guido<br />Friday, March 3 9:40 AM&ndash;9:55 AM<br />This is the 2nd talk in <a href='session-118.html'>Kinetic and Continuum Theories for Computational Plasma Physics - Part I of II</a> (9:20 AM&ndash;11:00 AM)<br />G102<br /><br /><small>Large-scale simulations of the plasma boundary are key to the understanding and improvement of tokamak fusion experiments. A collaboration with the Swiss Plasma Center institute led to the development of a new method in order to accelerate the solution of consecutive linear systems which can arise from such simulations. A system of differential algebraic equations is obtained from the 3D drift-reduced Brangiskii equations that model plasma dynamics in the edge layer of the tokamak. The explicit time integration of such a system yields the need for solving a sequence of consecutive linear systems, for which both the matrix and the right-hand-side are time-dependent. As the time step is constrained to remain small, a very large number of systems need to be solved, dominating the computational time. In order to mitigate this, we leverage the history of previous time solutions in order to reduce, sometimes drastically, the number of iterations needed by the linear systems solver. Taking inspiration by existing methods for implicitly discretized nonlinear evolution problems, our approach is based on combining the solution of a reduced order model with randomization. The effectiveness of our method is demonstrated for academic problems as well as large-scale plasma simulations.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75404' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk542' style='display:block'><a href='javascript:toggle_star(542)' class='star'><span class='star542'>&star;</span></a> <b>10:00 AM&ndash;10:15 AM (G102)</b> Grant Gorman, Two-Fluid Simulations of Ultracold Neutral Plasmas in the Absence of External Magnetic Fields <span id='bitlink-501'><small><a href='javascript:show_bit(501)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-501' style='display:none'><small><a href='javascript:hide_bit(501)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Two-Fluid Simulations of Ultracold Neutral Plasmas in the Absence of External Magnetic Fields</b><br />Grant Gorman<br />Friday, March 3 10:00 AM&ndash;10:15 AM<br />This is the 3rd talk in <a href='session-118.html'>Kinetic and Continuum Theories for Computational Plasma Physics - Part I of II</a> (9:20 AM&ndash;11:00 AM)<br />G102<br /><br /><small>Ultracold neutral plasmas (UCNPs), created by the photoionization of a cold gas, are an excellent platform for studying neutral plasmas in far more complex environments such as plasma in the Sun’s atmosphere, white dwarf stars, and inertial-confinement fusion devices. UCNPs are highly versatile systems with ion temperatures below 1 K, tunable electron temperatures from 1-1000 K, and densities ranging from $10^6$-$10^{12}$ cm$^{-3}$ and have proven to be an ideal testbed for a wide variety of numerical plasma models due to their clean and controllable initial conditions and precise diagnostics. In this talk, I will discuss our recent progress developing a multi-physics, two-fluid (2F) plasma code for the purpose of simulating plasmas spanning the ultracold in a laboratory environment to the aftermath of interchange reconnection in the solar corona. The code is validated in the absence of external magnetic fields by comparing 2F simulations of the evolution of a UCNPs with various initial conditions to experimental data and kinetic theory, including the evolution of a UCNP with a spherically symmetric Gaussian density distribution, the propagation of planar ion holes, and the evolution of ion acoustic waves excited by a periodic density perturbation.    
+Research supported by the NSF through CAREER award AGS-1450230.    
+    
+    
+    
+    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75404' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk543' style='display:block'><a href='javascript:toggle_star(543)' class='star'><span class='star543'>&star;</span></a> <b>10:20 AM&ndash;10:35 AM (G102)</b> Gregory Szypko, Modeling Interchange Reconnection in the Solar Corona <span id='bitlink-502'><small><a href='javascript:show_bit(502)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-502' style='display:none'><small><a href='javascript:hide_bit(502)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Modeling Interchange Reconnection in the Solar Corona</b><br />Gregory Szypko<br />Friday, March 3 10:20 AM&ndash;10:35 AM<br />This is the 4th talk in <a href='session-118.html'>Kinetic and Continuum Theories for Computational Plasma Physics - Part I of II</a> (9:20 AM&ndash;11:00 AM)<br />G102<br /><br /><small>Interchange Reconnection (IR) is a magnetic reconnection scenario which occurs at the boundary between open- and closed-field regions of the Sun's atmosphere. When IR connects a hot, dense Active Region to the cooler plasma surrounding it, the resulting discontinuity can lead to field-aligned shock formation. In this talk, we detail our efforts to simulate this aftermath of IR using our generalizable fluid plasma code. Specifically, we consider the effect of non-neutrality on post-IR shock formation and propagation through a multi-fluid magnetohydrodynamic approach. We also discuss the relevance of kinetic-scale behavior to such reconnection scenarios. This work was supported by the NSF through CAREER award AGS-1450230.    
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75404' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

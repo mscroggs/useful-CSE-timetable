@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>New Algorithmic Developments for Heterogeneous Computing Environments - Part II of II</h2><div class='index-talk' id='talk1654' style='display:block'><a href='javascript:toggle_star(1654)' class='star'><span class='star1654'>&star;</span></a> <b>11:30 AM&ndash;11:45 AM (D402)</b> Cory A. Gilette, Towards a Dominant SVD Computation via ADMM-Like Decentralized Consensus Optimization with Projection Splitting <span id='bitlink-1518'><small><a href='javascript:show_bit(1518)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1518' style='display:none'><small><a href='javascript:hide_bit(1518)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Towards a Dominant SVD Computation via ADMM-Like Decentralized Consensus Optimization with Projection Splitting</b><br />Cory A. Gilette<br />Friday, March 3 11:30 AM&ndash;11:45 AM<br />This is the 1st talk in <a href='session-366.html'>New Algorithmic Developments for Heterogeneous Computing Environments - Part II of II</a> (11:30 AM&ndash;1:10 PM)<br />D402<br /><br /><small>The Singular Value Decomposition (SVD) of a matrix provides an optimal low-rank approximation of the data, which is useful across science and engineering. Existing methods for computing this approximation when data is held privately on multiple machines require a central parameter server or the transmission of local gradients; otherwise, they scale poorly with the amount of data. To develop a communication-efficient and scale-invariant  decentralized algorithm, we frame the computation as a decentralized consensus optimization problem and introduce reasonable approximations to simplify the Alternating Direction Method of Multipliers (ADMM) solution. Limited numerical experiments show that our algorithm can outperform its centralized version and is competitive with decentralized stochastic gradient descent. While theoretical guarantees of convergence are absent, this work furthers the development of reliable decentralized solutions to problems posed in non-traditional computing environments.    
+Prepared by LLNL under Contract DE-AC52-07NA27344. Funded by LLNL LDRD project 22-ERD-045. LLNL-ABS-840146  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75803' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1655' style='display:block'><a href='javascript:toggle_star(1655)' class='star'><span class='star1655'>&star;</span></a> <b>11:50 AM&ndash;12:05 AM (D402)</b> Katarzyna Swirydowicz, Random Sketching for Improving the Performance of Gram-Schmidt Algorithm on Modern Architectures <span id='bitlink-1519'><small><a href='javascript:show_bit(1519)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1519' style='display:none'><small><a href='javascript:hide_bit(1519)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Random Sketching for Improving the Performance of Gram-Schmidt Algorithm on Modern Architectures</b><br />Katarzyna Swirydowicz<br />Friday, March 3 11:50 AM&ndash;12:05 AM<br />This is the 2nd talk in <a href='session-366.html'>New Algorithmic Developments for Heterogeneous Computing Environments - Part II of II</a> (11:30 AM&ndash;1:10 PM)<br />D402<br /><br /><small>Randomized Gram-Schmidt was introduces in 2022 in a paper authored by Oleg Balabanov and Laura Grigori. The authors showed how to use their randomized scheme in GMRES and demonstrated the results featuring both: a speedup of their Matlab GMRES code and stability comparable to GMRES with “regular”    modified Gram-Schmidt. We extended this work by connecting it to low-synchronization variants of Gram-Schmidt. We also created a GPU implementation to test the practicality of the proposed algorithm. As it turns out, using random sketching in conjunction with low-synchronization GMRES results in a significant reduction of computational time and is ultimately an appropriate and highly performant GPU strategy.   </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75803' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1656' style='display:block'><a href='javascript:toggle_star(1656)' class='star'><span class='star1656'>&star;</span></a> <b>12:10 AM&ndash;12:25 AM (D402)</b> Yamen Mubarka, Resilient Workflow Management for Interfacing Among Black Box Algorithms <span id='bitlink-1520'><small><a href='javascript:show_bit(1520)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1520' style='display:none'><small><a href='javascript:hide_bit(1520)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Resilient Workflow Management for Interfacing Among Black Box Algorithms</b><br />Yamen Mubarka<br />Friday, March 3 12:10 AM&ndash;12:25 AM<br />This is the 3rd talk in <a href='session-366.html'>New Algorithmic Developments for Heterogeneous Computing Environments - Part II of II</a> (11:30 AM&ndash;1:10 PM)<br />D402<br /><br /><small>Computational scientific discovery is increasingly driven by carefully linking independently developed research codes and deploying them on heterogeneous large scale high performance computing resources.  We present Merlin, a workflow management tool, to aid in resolving the subtleties of interfacing complex scientific codes and, in particular, enable robust, machine learning-friendly ensembles of simulations.  We will discuss some of Merlin’s features that allow for multi-tiered fault recovery and low per-task overhead. Our showcase example - currently in development - is to design inertial confinement fusion experiments via a combination of simulation, optimization, and machine learning algorithms on the exascale machine El Capitan, which is projected to be the world’s fastest supercomputer when fully deployed in 2023.     </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75803' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

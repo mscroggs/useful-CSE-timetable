@@ -1,0 +1,54 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Solving PDEs with DUNE-FEM</h2><div class='index-talk' id='talk1807' style='display:block'><a href='javascript:toggle_star(1807)' class='star'><span class='star1807'>&star;</span></a> <b>4:00 PM&ndash;6:00 PM (Europa Foyer)</b> Robert Kl&#246;fkorn, An Overview on Recent Development in Dune and Dune-Fem <span id='bitlink-1653'><small><a href='javascript:show_bit(1653)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1653' style='display:none'><small><a href='javascript:hide_bit(1653)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>An Overview on Recent Development in Dune and Dune-Fem</b><br />Robert Kl&#246;fkorn<br />Tuesday, February 28 4:00 PM&ndash;6:00 PM<br />This is the 1st talk in <a href='session-398.html'>Solving PDEs with DUNE-FEM</a> (4:00 PM&ndash;6:00 PM)<br />Europa Foyer<br /><br /><small>For about two decades the Distributed and Unified Numerics Environment  (DUNE:https://dune-project.org) has been an active part in the scientific  development of computational software and technology and it's C++ routines are the basis for several other well established open source projects, for example, DuMux (https://dumux.org) or the Open Porous Media Initiative  (https://opm-project.org).     
+Although the C++ interfaces of DUNE are highly  flexible and customizable, a solid knowledge of C++ is necessary to make use of this powerful tool. In this Minisymposterium an overview on recent  development towards a Python interface for DUNE and in particular DUNE-FEM,  a module which provides highly efficient implementations of hp-adaptive  Discontinuous Galerkin (DG) methods for solving a wide range of non linear  partial differential equations. Providing easier  user interfaces based on Python and the Unified Form Language (UFL) opens DUNE-FEM to a broader audience.    
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75877' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1808' style='display:block'><a href='javascript:toggle_star(1808)' class='star'><span class='star1808'>&star;</span></a> <b>4:00 PM&ndash;6:00 PM (Europa Foyer)</b> Johannes Kasimir, Matrix Free Multigrid Preconditioner for Dg-Sem for Compressible Flow <span id='bitlink-1654'><small><a href='javascript:show_bit(1654)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1654' style='display:none'><small><a href='javascript:hide_bit(1654)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Matrix Free Multigrid Preconditioner for Dg-Sem for Compressible Flow</b><br />Johannes Kasimir<br />Tuesday, February 28 4:00 PM&ndash;6:00 PM<br />This is the 2nd talk in <a href='session-398.html'>Solving PDEs with DUNE-FEM</a> (4:00 PM&ndash;6:00 PM)<br />Europa Foyer<br /><br /><small>High fidelity fluid simulations have many important applications in science and engineering, with examples including numerical weather prediction and simulation aided design. Discontinuous Galerkin (DG) methods are high order discretizations, promising for simulation of unsteady compressible fluid flow in three dimensions. Systems arising from such discretizations of turbulent fluid motion are often stiff, and require implicit time integration. This requires fast, parallel, low-memory solvers for the algebraic equation systems that arise.  For (low order) finite volume (FV) methods, multigrid (MG) methods have been successfully applied for this purpose. But for high order DG such solver are currently lacking.  This deficiency inhibits wider adoption of DG methods, and motivates our research to construct a matrix free preconditioner for high order DG discretizations. The preconditioner is based on a multigrid method constructed for a low order finite volume discretization defined on a subgrid of the DG mesh. Numerical experiments on atmospheric flow problems show the benefit of this approach.    
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75877' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1809' style='display:block'><a href='javascript:toggle_star(1809)' class='star'><span class='star1809'>&star;</span></a> <b>4:00 PM&ndash;6:00 PM (Europa Foyer)</b> Benjamin Terschanski, Reactive Transport Models for Ice-Ocean Interfaces <span id='bitlink-1655'><small><a href='javascript:show_bit(1655)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1655' style='display:none'><small><a href='javascript:hide_bit(1655)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Reactive Transport Models for Ice-Ocean Interfaces</b><br />Benjamin Terschanski<br />Tuesday, February 28 4:00 PM&ndash;6:00 PM<br />This is the 3rd talk in <a href='session-398.html'>Solving PDEs with DUNE-FEM</a> (4:00 PM&ndash;6:00 PM)<br />Europa Foyer<br /><br /><small>Heat and mass exchange processes at the boundary between sea ice and ocean saltwater play a vital role in understanding the coupling between earth's ocean and atmosphere.   Ice-ocean interface models are furthermore used to constrain thickness and composition of the kilometer-thick shell of icy moons such as the Jovian moon Europa.     
+Meso-scale models of the ice-saltwater interface treat the transition region between ice and seawater as a continuous mush containing a mix of solid and high-salinity brine [Buffo et al., Dynamics of a Solidifying Icy Satellite Shell, 2021]. This is in analogy to established enthalpy methods for the treatment of alloy solidification [Swaminathan and Voller, On the enthalpy method, 1993]. Governing equations for incompressible flow are coupled with thermal and solute transport through buoyancy and advective terms.     
+In this contribution we focus on the numerical treatment of the mixture solidification problem.   Assuming thermodynamic equilibrium, conservation of energy and solute transport are solved with discontinuous Galerkin finite elements.   Our prototype uses the DUNE Python API [Dedner and Nolte, The Dune Python Module, 2018] and leverages several recent works on multiphase reactive transport.   In particular, we generalize a variable switching technique [Krabbenhoft et al., An implicit mixed enthalpy–temperature method for phase-change problems, 2007] to systems where the liquid fraction is a multivariable function.     </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75877' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1810' style='display:block'><a href='javascript:toggle_star(1810)' class='star'><span class='star1810'>&star;</span></a> <b>4:00 PM&ndash;6:00 PM (Europa Foyer)</b> Niklas Kotarsky, Time Adaptive Quasi-Newton Waveform Iteration <span id='bitlink-1656'><small><a href='javascript:show_bit(1656)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1656' style='display:none'><small><a href='javascript:hide_bit(1656)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Time Adaptive Quasi-Newton Waveform Iteration</b><br />Niklas Kotarsky<br />Tuesday, February 28 4:00 PM&ndash;6:00 PM<br />This is the 4th talk in <a href='session-398.html'>Solving PDEs with DUNE-FEM</a> (4:00 PM&ndash;6:00 PM)<br />Europa Foyer<br /><br /><small> </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75877' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

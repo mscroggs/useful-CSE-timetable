@@ -1,0 +1,68 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Advanced Solvers for Geophysical Flows</h2><div class='index-talk' id='talk1166' style='display:block'><a href='javascript:toggle_star(1166)' class='star'><span class='star1166'>&star;</span></a> <b>9:45 AM&ndash;10:00 AM (Forum Centre)</b> Stephen Thomas, Augmented Block-Arnoldi Recycling Solvers for Atmospheric Models <span id='bitlink-1078'><small><a href='javascript:show_bit(1078)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1078' style='display:none'><small><a href='javascript:hide_bit(1078)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Augmented Block-Arnoldi Recycling Solvers for Atmospheric Models</b><br />Stephen Thomas<br />Tuesday, February 28 9:45 AM&ndash;10:00 AM<br />This is the 1st talk in <a href='session-256.html'>Advanced Solvers for Geophysical Flows</a> (9:45 AM&ndash;11:25 AM)<br />Forum Centre<br /><br /><small>We present a one-reduce iterated Gauss-Seidel IGS-GMRES   algorithm based on a hybrid MGS-CGS projector.  The Krylov vectors  are close to orthogonal and linearly independent in finite precision.  The Arnoldi relative residual no longer stagnates above machine precision   and the smallest singular value of $V_k$ remains close to one.   The new Arnoldi-QR algorithm can also be employed to compute eigenvalues   with the Krylov-Schur algorithm and improves Krylov exponential integrators. An augmented-Arnoldi formulation is applied to Krylov subspace recycling.   A block-Krylov algorithm is employed with  an BMGS-LTS inter-ortho skeleton as in Carson et al (2022),   and a block triangular solve. When combined with an   oblique projection, similar to Embree et al (2017),    the recycling algorithm leads to significant reductions  in the number of solver iterations per linear system.    The weight is also interpreted in terms of the angle between residual   norms at restarts in LGMRES, Baker et al. (2006).  We demonstrate a 10-fold reduction in the iteration    count for warm bubble vertical convection governed by the    non-hydrostatic Euler equations and pressure projection for the incompressible Navier-Stokes equations applied to wind-turbines.  In many cases, the recycle subspace eigen-spectrum may substitute  for a preconditioner.    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75583' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1167' style='display:block'><a href='javascript:toggle_star(1167)' class='star'><span class='star1167'>&star;</span></a> <b>10:05 AM&ndash;10:20 AM (Forum Centre)</b> Sara Calandrini, A Parallel Solver for Nonhydrostatic Ocean Models <span id='bitlink-1079'><small><a href='javascript:show_bit(1079)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1079' style='display:none'><small><a href='javascript:hide_bit(1079)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>A Parallel Solver for Nonhydrostatic Ocean Models</b><br />Sara Calandrini<br />Tuesday, February 28 10:05 AM&ndash;10:20 AM<br />This is the 2nd talk in <a href='session-256.html'>Advanced Solvers for Geophysical Flows</a> (9:45 AM&ndash;11:25 AM)<br />Forum Centre<br /><br /><small>The Model for Prediction Across Scales-Ocean (MPAS-Ocean) is an open-source, global ocean model and is one component of a family of climate models within the MPAS framework, including atmosphere, sea-ice, and land-ice models. In this work, a new formulation for the ocean model is presented that solves  the nonhydrostatic, incompressible Boussinesq equations on an unstructured, staggered, z-level grid. The introduction of this nonhydrostatic capability is necessary for the resolution of internal wave dynamics and large eddy simulations. Compared to the standard, hydrostatic formulation, a nonhydrostatic pressure solver and a vertical momentum equation are added, where the PETSc (Portable Extensible Toolkit for Scientific Computation) library is used for the inversion of a large sparse system for the nonhydrostatic pressure. Numerical results on a stratified seiche, internal solitary wave and nonhydrostatic overflow test cases are presented, and the parallel efficiency and accuracy of the time-stepper are evaluated.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75583' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1168' style='display:block'><a href='javascript:toggle_star(1168)' class='star'><span class='star1168'>&star;</span></a> <b>10:25 AM&ndash;10:40 AM (Forum Centre)</b> Mauro Perego, Computational Challenges in Designing Robust Solvers for Ice Sheet Modeling <span id='bitlink-1080'><small><a href='javascript:show_bit(1080)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1080' style='display:none'><small><a href='javascript:hide_bit(1080)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Computational Challenges in Designing Robust Solvers for Ice Sheet Modeling</b><br />Mauro Perego<br />Tuesday, February 28 10:25 AM&ndash;10:40 AM<br />This is the 3rd talk in <a href='session-256.html'>Advanced Solvers for Geophysical Flows</a> (9:45 AM&ndash;11:25 AM)<br />Forum Centre<br /><br /><small>Modeling the dynamics of Greenland and Antarctic ice sheets is of paramount importance for accurately modeling climate and in particular for providing projections of sea level rise.  This requires solving optimization problems constrained by partial differential equations for calibrating the models, running the model forward in time for decades or centuries, and performing analysis to quantify the uncertainty in the model projections. All these tasks rely on the repeated solution of nonlinear and linear solvers, which makes it critical to have robust large-scale solvers that can efficiently run on new architectures. In this talk we present the solver strategies we adopt in the ice-sheet code MALI and present result targeting forward and inverse ice-sheet problems.     
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75583' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1169' style='display:block'><a href='javascript:toggle_star(1169)' class='star'><span class='star1169'>&star;</span></a> <b>10:45 AM&ndash;11:00 AM (Forum Centre)</b> Daniel Martin, Solver Improvements for Ice Sheets and Adaptive Mesh Refinement <span id='bitlink-1081'><small><a href='javascript:show_bit(1081)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1081' style='display:none'><small><a href='javascript:hide_bit(1081)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Solver Improvements for Ice Sheets and Adaptive Mesh Refinement</b><br />Daniel Martin<br />Tuesday, February 28 10:45 AM&ndash;11:00 AM<br />This is the 4th talk in <a href='session-256.html'>Advanced Solvers for Geophysical Flows</a> (9:45 AM&ndash;11:25 AM)<br />Forum Centre<br /><br /><small>The BISICLES ice sheet model (Cornford et al, 2013) employs adaptive mesh refinement (AMR) to efficiently resolve relatively fine dynamical features like grounding lines and ice streams.  Like most ice sheet models, BISICLES spends the vast majority of its computational effort solving a coupled nonlinear viscous tensor equation for the ice velocity field.  Solving these equations in the context of an ice sheet presents specific challenges which must be addressed for our model to be of practical use in understanding and projecting ice sheet response to climate changes.  We will discuss strategies we have adopted to improve the efficiency and performance of our solvers, along with recent developments like the implementation of a parallel-in-time scheme for time integration.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75583' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

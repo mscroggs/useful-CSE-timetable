@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Co-Design for Heterogeneous System Architectures - Part I of II</h2><div class='index-talk' id='talk323' style='display:block'><a href='javascript:toggle_star(323)' class='star'><span class='star323'>&star;</span></a> <b>9:45 AM&ndash;10:00 AM (E102)</b> David F. Richards, Supporting Applications on Emerging Heterogeneous Supercomputers <span id='bitlink-297'><small><a href='javascript:show_bit(297)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-297' style='display:none'><small><a href='javascript:hide_bit(297)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Supporting Applications on Emerging Heterogeneous Supercomputers</b><br />David F. Richards<br />Tuesday, February 28 9:45 AM&ndash;10:00 AM<br />This is the 1st talk in <a href='session-71.html'>Co-Design for Heterogeneous System Architectures - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />E102<br /><br /><small>The introduction of heterogeneous computing via GPUs represented a significant shift in direction for HPC centers, and therefore required significant preparation. Science applications faced many challenges and required re-thinking and re-factoring of their algorithms, system software, and tools. Furthermore, partnerships with system vendors were necessary to co-design architectural features with software and applications.  In this talk, we present key lessons learned from a concentrated effort at Lawrence Livermore National Laboratory to prepare applications, system software, and tools for existing and upcoming heterogeneous supercomputers. We share the process we applied at the laboratory with the hope that others will be able to learn from both our successes and intermediate setbacks. We describe best practices for algorithms and source code, system configuration and software stack, tools, and application performance. Finally, we present early results as we prepare for the arrival of our exascale supercomputer El Capitan.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75318' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk325' style='display:block'><a href='javascript:toggle_star(325)' class='star'><span class='star325'>&star;</span></a> <b>10:05 AM&ndash;10:20 AM (E102)</b> Adrien Roussel, Enhancing Productivity on Heterogeneous Supercomputers with Task-Based Programming Model <span id='bitlink-298'><small><a href='javascript:show_bit(298)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-298' style='display:none'><small><a href='javascript:hide_bit(298)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Enhancing Productivity on Heterogeneous Supercomputers with Task-Based Programming Model</b><br />Adrien Roussel<br />Tuesday, February 28 10:05 AM&ndash;10:20 AM<br />This is the 2nd talk in <a href='session-71.html'>Co-Design for Heterogeneous System Architectures - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />E102<br /><br /><small>Heterogeneous supercomputers with GPUs are one of the best candidates to build Exascale machines. However, porting scientific applications with huge number of code lines is challenging. Data transfers/locality and exposing enough parallelism determine the maximum achievable performance on such systems. Porting efforts impose developers to rewrite parts of the application which is tedious and time-consuming and does not guarantee performances in all the cases. Being able to detect which parts can be expected to deliver performance gains on GPUs is therefore a major asset for developers. Moreover, task parallel programming model is a promising alternative to expose enough parallelism while allowing asynchronous execution between CPU and GPU. OpenMP 4.5 introduces the “target” directive to offload computation on GPU in a portable way. Target constructions are considered as explicit OpenMP task as for CPU but executed on GPU. In this work, we propose a methodology to detect the most profitable loops of an application that can be ported on GPU. While we have applied the detection part on several mini applications (LULESH, miniFE, XSBench and Quicksilver), we experimented the full methodology on LULESH through MPI+OpenMP task programming model with target directives. It relies on runtime modifications to overlap of data transfers and kernel execution through tasks. This work has been integrated into the MPC framework, and has been validated on distributed heterogeneous system.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75318' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk326' style='display:block'><a href='javascript:toggle_star(326)' class='star'><span class='star326'>&star;</span></a> <b>10:25 AM&ndash;10:40 AM (E102)</b> Sumathi Lakshmiranganatha, Accelerated Computing Using FleCSI <span id='bitlink-299'><small><a href='javascript:show_bit(299)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-299' style='display:none'><small><a href='javascript:hide_bit(299)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Accelerated Computing Using FleCSI</b><br />Sumathi Lakshmiranganatha<br />Tuesday, February 28 10:25 AM&ndash;10:40 AM<br />This is the 3rd talk in <a href='session-71.html'>Co-Design for Heterogeneous System Architectures - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />E102<br /><br /><small>The Flexible Computational Science Infrastructure (FleCSI) framework is a compile time configurable runtime library that is designed to support multi-physics applications development. FleCSI’s abstraction layer provides a single-source programming interface for shared-memory and distributed-memory parallelism through task and kernel execution, respectively. The shared memory parallelism interface in FleCSI supports portability across heterogeneous computing architectures, utilizing the underlying accelerator runtimes OpenMP, CUDA, and HIP. In this talk, we present the performance results for two FleCSI-based applications: MPAS (shallow water core), and a basic iterative solver for elliptic PDEs. Results were obtained on heterogeneous computing architectures that demonstrate the performance, portability, and productivity capabilities of FleCSI.    
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75318' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>PDE Simulations with High-Productivity Languages at the Dawn of Exascale - Part I of II</h2><div class='index-talk' id='talk332' style='display:block'><a href='javascript:toggle_star(332)' class='star'><span class='star332'>&star;</span></a> <b>2:35 PM&ndash;2:50 PM (E101)</b> Jack Betteridge, GPU Code Generation for Finite Elements with Firedrake <span id='bitlink-304'><small><a href='javascript:show_bit(304)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-304' style='display:none'><small><a href='javascript:hide_bit(304)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>GPU Code Generation for Finite Elements with Firedrake</b><br />Jack Betteridge<br />Thursday, March 2 2:35 PM&ndash;2:50 PM<br />This is the 1st talk in <a href='session-73.html'>PDE Simulations with High-Productivity Languages at the Dawn of Exascale - Part I of II</a> (2:35 PM&ndash;4:15 PM)<br />E101<br /><br /><small>GPUs and accelerators are now common place on large HPC machines and to harness all of the compute power available on such systems these devices can no longer be ignored. However, programming for the GPU remains a difficult task, and optimising for a specific vendor/model is harder still. Using Firedrake we can remove much of this difficulty by using automatic code generation and targeting the GPU directly, which allows users to utilise accelerators for their PDE simulations.    
+For most projects a "rewrite for GPUs" or a "GPU version" can be created, this is not the case for Firedrake. We create a pathway for automatically generating GPU code for any PDE a user can input, as well as maintaining all existing CPU functionality. By not completely rewriting the codebase we demonstrate the power of the code generation approach.    
+We present the early progress made in offloading Firedrake’s functionality on to accelerators. The main focus is on adding GPU assembly for one-forms to enable matrix free operator evaluation and enabling GPU based solvers. We will demonstrate the functionality within Firedrake to optimise for GPUs specifically and how to minimise host to device transfers. These changes utilise the GPU support within loo.py and PETSc to produce efficient and scalable simulations. Some early results are included that show some of the preliminary functionality for GPU platforms.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75322' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk334' style='display:block'><a href='javascript:toggle_star(334)' class='star'><span class='star334'>&star;</span></a> <b>2:55 PM&ndash;3:10 PM (E101)</b> George Bisbas, The Devito DSL and Compiler Framework: From Symbolic PDEs to HPC Code <span id='bitlink-305'><small><a href='javascript:show_bit(305)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-305' style='display:none'><small><a href='javascript:hide_bit(305)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>The Devito DSL and Compiler Framework: From Symbolic PDEs to HPC Code</b><br />George Bisbas<br />Thursday, March 2 2:55 PM&ndash;3:10 PM<br />This is the 2nd talk in <a href='session-73.html'>PDE Simulations with High-Productivity Languages at the Dawn of Exascale - Part I of II</a> (2:35 PM&ndash;4:15 PM)<br />E101<br /><br /><small>Partial differential equations (PDEs) are used in various scientific domains, such as seismic and medical imaging. In several contexts, they are solved numerically by the finite difference (FD) method. When modelling real-world phenomena, these methods are complex to derive, implement and computationally expensive. We present Devito, an open-source framework written in Python that addresses these issues.  Devito consists of a domain-specific language to express PDEs symbolically via FD and a compiler capable of lowering symbolic expressions into highly efficient kernels for a variety of architectures. Thanks to its multi-layer architecture, Devito promotes interdisciplinary research and development. Time-consuming, error-prone and handwritten code practices are mitigated: (i) problem modelling, (ii) implementation of stencils and their adjoints, boundary conditions, sparse operations, and other PDE operators, (iii) performance optimisations (e.g., tiling and FLOPs reduction) and (iv) support for vectorisation, shared- and distributed-memory parallelism, GPUs.  Devito has been used successfully in academia and industry for several years, especially in the context of wave modelling in anisotropic media for seismic inversion, delivering competitive performance while drastically reducing complexity.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75322' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk335' style='display:block'><a href='javascript:toggle_star(335)' class='star'><span class='star335'>&star;</span></a> <b>3:15 PM&ndash;3:30 PM (E101)</b> Thomas M. Bendall, Physics-Dynamics-Chemistry Coupling with Components of Different Resolutions in LFRic <span id='bitlink-306'><small><a href='javascript:show_bit(306)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-306' style='display:none'><small><a href='javascript:hide_bit(306)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Physics-Dynamics-Chemistry Coupling with Components of Different Resolutions in LFRic</b><br />Thomas M. Bendall<br />Thursday, March 2 3:15 PM&ndash;3:30 PM<br />This is the 3rd talk in <a href='session-73.html'>PDE Simulations with High-Productivity Languages at the Dawn of Exascale - Part I of II</a> (2:35 PM&ndash;4:15 PM)<br />E101<br /><br /><small>Can we save computational resources in NWP and climate models without degrading the quality of the solution, by running different parts of the model at different resolutions? In traditional models, the physics parametrisations, dynamical core and any chemistry components use the same grid. In this talk, I will present an approach to run these components at different resolutions to one another, within the Met Office’s new LFRic model, designed for the next generation of supercomputers.    
+The talk will give an overview of a geometric framework for mapping fields between meshes, which preserves certain desirable mathematical properties as the fields are mapped. Only changes of resolution in the horizontal grid are considered, and the meshes are limited to cases in which the cells of the finer mesh are exactly nested within the cells of the coarser mesh.    
+Key to the design of LFRic is the PSyclone code generation system. This should make LFRic portable between different supercomputer architectures, and to allow it to be easily adapted to different hardwares.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75322' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

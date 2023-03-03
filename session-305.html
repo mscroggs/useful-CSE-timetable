@@ -1,0 +1,52 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Fast Algorithms for Variable Coefficient, Time-Dependent, and Inhomogeneous Problems - Part I of II</h2><div class='index-talk' id='talk1379' style='display:block'><a href='javascript:toggle_star(1379)' class='star'><span class='star1379'>&star;</span></a> <b>9:45 AM&ndash;10:00 AM (G110)</b> Travis Askham, Algorithms for Extension Along Normals <span id='bitlink-1273'><small><a href='javascript:show_bit(1273)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1273' style='display:none'><small><a href='javascript:hide_bit(1273)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Algorithms for Extension Along Normals</b><br />Travis Askham<br />Monday, February 27 9:45 AM&ndash;10:00 AM<br />This is the 1st talk in <a href='session-305.html'>Fast Algorithms for Variable Coefficient, Time-Dependent, and Inhomogeneous Problems - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />G110<br /><br /><small>Function extension is a useful technique for efficiently evaluating a particular solution of a constant coefficient PDE on a smooth domain, by evaluating a convolutional integral in "free space". This strategy avoids specialized quadrature in the volume and utilizes high throughput fast algorithms that are available in simple geometries. Recently, methods for function extension have been proposed which leverage the relative simplicity of one dimensional function extrapolation: extrapolation is performed only in the direction normal to the domain boundary and interpolation is performed tangentially. We propose a high order and efficient framework for extrapolation in this style which is suitable for both uniform and adaptive discretizations. Examples will be presented in 2 and 3 dimensions.   </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75684' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1380' style='display:block'><a href='javascript:toggle_star(1380)' class='star'><span class='star1380'>&star;</span></a> <b>10:05 AM&ndash;10:20 AM (G110)</b> Fredrik Fryklund, An FMM Accelerated Poisson Solver for Complicated Geometries in the Plane Using Function Extension <span id='bitlink-1274'><small><a href='javascript:show_bit(1274)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1274' style='display:none'><small><a href='javascript:hide_bit(1274)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>An FMM Accelerated Poisson Solver for Complicated Geometries in the Plane Using Function Extension</b><br />Fredrik Fryklund<br />Monday, February 27 10:05 AM&ndash;10:20 AM<br />This is the 2nd talk in <a href='session-305.html'>Fast Algorithms for Variable Coefficient, Time-Dependent, and Inhomogeneous Problems - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />G110<br /><br /><small>We present a potential theory-based adaptive solver for the Poisson equation in complicated geometries in the plane, accelerated with a fast multipole method (FMM). The solution is given explicitly as the sum of a volume potential and a double layer potential. To simplify the evaluation of the volume potential over the complicated domain, we extend the source data to a geometrically simpler domain, which contains the original geometry. It remains only to solve the homogeneous Laplace equation, with modified boundary data, to obtain the full solution. This is done with existing fast and accurate boundary integral methods. The novelty of our solver is the scheme used for creating the extension. The source data is represented on boxes in an adaptive quad-tree. For leaf boxes intersected by the boundary we extend the source data locally to a subset of its colleagues. The extension is created by sampling data from neighboring boxes and using a box-independent precomputed interpolation matrix. The resulting potential induced by the extended source data can then be efficiently computed with existing volume-integral FMMs. We demonstrate speed, robustness and high-order convergence through several examples, including piecewise smooth domains.    
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75684' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1381' style='display:block'><a href='javascript:toggle_star(1381)' class='star'><span class='star1381'>&star;</span></a> <b>10:25 AM&ndash;10:40 AM (G110)</b> Anna-Karin Tornberg, A Function Extension Methodology for the Advection Diffusion Equation on Time Dependent Domains <span id='bitlink-1275'><small><a href='javascript:show_bit(1275)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1275' style='display:none'><small><a href='javascript:hide_bit(1275)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>A Function Extension Methodology for the Advection Diffusion Equation on Time Dependent Domains</b><br />Anna-Karin Tornberg<br />Monday, February 27 10:25 AM&ndash;10:40 AM<br />This is the 3rd talk in <a href='session-305.html'>Fast Algorithms for Variable Coefficient, Time-Dependent, and Inhomogeneous Problems - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />G110<br /><br /><small> </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75684' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1383' style='display:block'><a href='javascript:toggle_star(1383)' class='star'><span class='star1383'>&star;</span></a> <b>10:45 AM&ndash;11:00 AM (G110)</b> Alexey Voronin, Monolithic AMG Preconditioners for Stokes Equations <span id='bitlink-1276'><small><a href='javascript:show_bit(1276)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1276' style='display:none'><small><a href='javascript:hide_bit(1276)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Monolithic AMG Preconditioners for Stokes Equations</b><br />Alexey Voronin<br />Monday, February 27 10:45 AM&ndash;11:00 AM<br />This is the 4th talk in <a href='session-305.html'>Fast Algorithms for Variable Coefficient, Time-Dependent, and Inhomogeneous Problems - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />G110<br /><br /><small>Advanced discretizations and complex meshes are becoming increasingly commonplace in a range of coupled physics and engineering applications, from weather prediction to fluid flow to graph problems. These discretizations also place increased demands on the underlying solvers, focusing on key properties of the PDE models - e.g., underlying conservation laws.     
+While algebraic multigrid methods effectively tackle some PDEs and some discretizations on unstructured meshes, the presence of higher-order basis functions and multiple coupled unknowns makes the algebraic coarsening a challenging endeavor.     
+This talk will highlight several new monolithic algebraic multigrid preconditioning approaches targeting high-order and non-standard discretizations of Stokes flow problems on structured and unstructured meshes. We will demonstrate how the robust monolithic AMG preconditioners can be constructed to precondition higher-order Taylor-Hood and Scott-Vogelius discretizations.      </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75684' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

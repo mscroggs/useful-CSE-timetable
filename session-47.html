@@ -1,0 +1,49 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Taming the Curse of Dimensionality in Non-Equilibrium Transport Systems - Part II of II</h2><div class='index-talk' id='talk214' style='display:block'><a href='javascript:toggle_star(214)' class='star'><span class='star214'>&star;</span></a> <b>9:45 AM&ndash;10:00 AM (D403)</b> Luis Chacon, An Implicit, Conservative, Asymptotic-Preserving Electrostatic Particle-in-Cell Algorithm for Arbitrarily Magnetized Plasmas <span id='bitlink-199'><small><a href='javascript:show_bit(199)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-199' style='display:none'><small><a href='javascript:hide_bit(199)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>An Implicit, Conservative, Asymptotic-Preserving Electrostatic Particle-in-Cell Algorithm for Arbitrarily Magnetized Plasmas</b><br />Luis Chacon<br />Thursday, March 2 9:45 AM&ndash;10:00 AM<br />This is the 1st talk in <a href='session-47.html'>Taming the Curse of Dimensionality in Non-Equilibrium Transport Systems - Part II of II</a> (9:45 AM&ndash;11:25 AM)<br />D403<br /><br /><small>We discuss a new full-orbit electrostatic particle-in-cell algorithm able to use large timesteps compared to particle gyro-period in arbitrary magnetic fields [Chen et al. JCP, submitted (2022)]. The algorithm extends earlier electrostatic fully implicit PIC implementations [Chen et al., JCP 230 (2011)] with a new asymptotic-preserving (AP) particle-push scheme [Ricketson et al., JCP 418 (2020)] (recently endowed with a very fast Picard nonlinear solver [Koshkarov et al., JCP 459 (2022)]) that allows timesteps much larger than particle gyroperiods. The AP integrator preserves all the averaged particle drifts in the large-timestep limit, while recovering resolved particle orbits with small timesteps. The scheme allows for a seamless, efficient treatment of particles in coexisting magnetized and unmagnetized regions, conserves energy and charge exactly, and does not spoil implicit solver performance. We demonstrate by numerical experiment with several strongly magnetized problems (diocotron instability, modified two-stream instability, and drift-wave instability) that two orders of magnitude wall-clock-time speedups are possible vs. the standard fully implicit electrostatic PIC algorithm without sacrificing solution quality and while preserving strict charge and energy conservation.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75269' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk212' style='display:block'><a href='javascript:toggle_star(212)' class='star'><span class='star212'>&star;</span></a> <b>10:05 AM&ndash;10:20 AM (D403)</b> Daniel A. Serino, Structure Preserving Machine Learning, a Symplectic Nn <span id='bitlink-197'><small><a href='javascript:show_bit(197)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-197' style='display:none'><small><a href='javascript:hide_bit(197)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Structure Preserving Machine Learning, a Symplectic Nn</b><br />Daniel A. Serino<br />Thursday, March 2 10:05 AM&ndash;10:20 AM<br />This is the 2nd talk in <a href='session-47.html'>Taming the Curse of Dimensionality in Non-Equilibrium Transport Systems - Part II of II</a> (9:45 AM&ndash;11:25 AM)<br />D403<br /><br /><small>Direct simulations in fusion energy sciences and climate modeling often involve resolving multiple time scales and can be prohibitively slow for tasks such as high-fidelity prediction and optimization. Reduced order models (ROM)s can provide significant speed-up compared to direct numerical simulations, however, they typically lack accuracy and stability for long-time predictions. We propose a structure-preserving neural ODE architecture to promote long-term stability. The network is parameterized so that any choice of weights results in a fast-slow dynamical system where the linearized dynamics are dissipative. This is achieved by using a general Schur-based parameterization for the linear portion of the neural ODE and ensuring that the eigenvalues lie on or to the left of imaginary axis. The split between the fast and slow eigenvalues is controlled through the use of a (known) physical parameter. The architecture is asymptotic-preserving in the limit of this parameter approaching zero. It is shown that the a slow manifold exists when the parameter is sufficiently small. Using the Schur-based parameterization of the linear term, an efficient IMEX scheme is developed for integrating the stiff neural ODE system forward in time and a fast adjoint-based method is utilized to estimate gradients with respect to the tunable weights. It will be demonstrated that the asymptotic behavior is preserved in the limit of the physical parameter approaching zero and that the model can robustly integrated to longer times beyond the training interval. Potential future applications of the proposed architecture include fusion modeling, accelerator physics, and weather prediction, where long time dynamics can be of great interest.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75269' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk216' style='display:block'><a href='javascript:toggle_star(216)' class='star'><span class='star216'>&star;</span></a> <b>10:25 AM&ndash;10:40 AM (D403)</b> Paul Tranquilli, Parallel in Time Methods for Plasmas <span id='bitlink-200'><small><a href='javascript:show_bit(200)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-200' style='display:none'><small><a href='javascript:hide_bit(200)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Parallel in Time Methods for Plasmas</b><br />Paul Tranquilli<br />Thursday, March 2 10:25 AM&ndash;10:40 AM<br />This is the 3rd talk in <a href='session-47.html'>Taming the Curse of Dimensionality in Non-Equilibrium Transport Systems - Part II of II</a> (9:45 AM&ndash;11:25 AM)<br />D403<br /><br /><small>Kinetic plasma simulations must reckon with many widely varying time-scales and are routinely stability-limited, requiring very many timesteps to resolve the interesting physics.  This makes them an ideal candidate for parallel-in-time (PIT) strategies.  Unfortunately, due to their extreme cost, these systems are simulated at the minimum threshold of spatial and temporal resolution, thus rendering the usual PIT strategy of spatiotemporal coarsening infeasible.  Here we present a parallel-in-time strategy that employs a coarsening of models, rather than meshes, to accelerate time to solution for high-dimensional kinetic plasma models by leveraging their much cheaper, lower dimensional fluid approximations.  These fluid models are closed via kinetic data computed in parallel, and are thus applicable far from the fluid limit.  We present initial results on the two-stream instability.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75269' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

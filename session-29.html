@@ -1,0 +1,49 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Structured Low-Rank Matrices - Part I of II</h2><div class='index-talk' id='talk130' style='display:block'><a href='javascript:toggle_star(130)' class='star'><span class='star130'>&star;</span></a> <b>9:20 AM&ndash;9:35 AM (G108)</b> Sameh Abdulah, Tile-Centric Approximations of The Maximum Likelihood Estimation for Large-Scale Spatial Statistics Modeling <span id='bitlink-123'><small><a href='javascript:show_bit(123)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-123' style='display:none'><small><a href='javascript:hide_bit(123)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Tile-Centric Approximations of The Maximum Likelihood Estimation for Large-Scale Spatial Statistics Modeling</b><br />Sameh Abdulah<br />Friday, March 3 9:20 AM&ndash;9:35 AM<br />This is the 1st talk in <a href='session-29.html'>Structured Low-Rank Matrices - Part I of II</a> (9:20 AM&ndash;11:00 AM)<br />G108<br /><br /><small>Maximum Likelihood Estimation (MLE) is one of the most popular approaches to model spatial and spatio-temporal data in Geoscience. It relies on generating an $npt \times npt$ covariance matrix to describe the underlying geospatial random field, where $n$ represents the number of spatial locations, $p$ is the number of variables, and $t$ is the number of time slots. When the $npt$ value is large, the MLE calculation becomes prohibitive with $O((npt)^3)$ time complexity. In the literature, studies have adopted two ways to mitigate the computational cost of the MLE operation: high-performance computing and algebraic approximations. In this work, we couple parallel processing with matrix approximation techniques to speed up the MLE operation on large-scale systems. Moreover, we combine two approximation techniques, i.e., mixed precisions and low-rank matrix approximations, to deliver higher compression rate and faster time-to-solution, while maintaining applications' accuracy. The results show that our approximation technique can provide accurate estimates for the statistical parameters with a considerable performance improvement. Our experiments were conducted on three different systems, KAUST Shaheen-II (an Intel Haswell system), HLRS HAWK (an AMD Epyc Rome system), and Riken Fugaku (a Fujitsu A64FX system).  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75245' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk131' style='display:block'><a href='javascript:toggle_star(131)' class='star'><span class='star131'>&star;</span></a> <b>9:40 AM&ndash;9:55 AM (G108)</b> Pieter Ghysels, Approximate Multifrontal Solver with GPU Accelerated Block Low Rank Compression <span id='bitlink-124'><small><a href='javascript:show_bit(124)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-124' style='display:none'><small><a href='javascript:hide_bit(124)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Approximate Multifrontal Solver with GPU Accelerated Block Low Rank Compression</b><br />Pieter Ghysels<br />Friday, March 3 9:40 AM&ndash;9:55 AM<br />This is the 2nd talk in <a href='session-29.html'>Structured Low-Rank Matrices - Part I of II</a> (9:20 AM&ndash;11:00 AM)<br />G108<br /><br /><small>We present an approximate sparse multifrontal solver with block low rank compression, used as a preconditioner for GMRES or BiCGStab.  The solver runs on modern GPU architectures, relying on non-uniform batched dense linear algebra kernels from the MAGMA and KBLAS libraries. Various low rank compression kernels are compared, including methods based on adaptive randomized sampling, in terms of accuracy and performance on the GPU. The multifrontal solver can furthermore combine multiple rank structured formats, such as block low rank and hierarchically off-diagonal butterfly, where the choice of approximation method depends on the size of the frontal matrix being compressed. This combination reduces both the asymptotic complexity as well as the runtime for medium scale problem sizes. We consider a range of industrial and academic applications: high frequency Helmholtz and Maxwell, incompressible Navier-Stokes, etc.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75245' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk133' style='display:block'><a href='javascript:toggle_star(133)' class='star'><span class='star133'>&star;</span></a> <b>10:00 AM&ndash;10:15 AM (G108)</b> Edmond Chow, Algorithms, Applications, and Software for $\mathcal{H}^2$ Hierarchical Matrices <span id='bitlink-125'><small><a href='javascript:show_bit(125)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-125' style='display:none'><small><a href='javascript:hide_bit(125)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Algorithms, Applications, and Software for $\mathcal{H}^2$ Hierarchical Matrices</b><br />Edmond Chow<br />Friday, March 3 10:00 AM&ndash;10:15 AM<br />This is the 3rd talk in <a href='session-29.html'>Structured Low-Rank Matrices - Part I of II</a> (9:20 AM&ndash;11:00 AM)<br />G108<br /><br /><small>The $\mathcal{H}^2$ hierarchical matrix representation makes it possible to store and apply certain dense kernel matrices with linear (optimal) complexity. This makes it promising to use $\mathcal{H}^2$ hierarchical matrices for large-scale scientific and machine learning applications where these kernel matrices arise. This talk will discuss recent developments in the efficient and accurate low-rank or interpolative decomposition needed in $\mathcal{H}^2$ hierarchical matrix construction for different types of kernel matrices from different types of applications. Recently developed software for these applications will also be presented.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75245' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

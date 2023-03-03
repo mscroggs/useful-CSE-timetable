@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>AI-Driven Design and Optimization of Future Electronics - Part I of II</h2><div class='index-talk' id='talk1408' style='display:block'><a href='javascript:toggle_star(1408)' class='star'><span class='star1408'>&star;</span></a> <b>2:35 PM&ndash;2:50 PM (E107)</b> Zhi Jackie Yao, AI-Driven Design and Optimization of Future Electronics <span id='bitlink-1293'><small><a href='javascript:show_bit(1293)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1293' style='display:none'><small><a href='javascript:hide_bit(1293)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>AI-Driven Design and Optimization of Future Electronics</b><br />Zhi Jackie Yao<br />Thursday, March 2 2:35 PM&ndash;2:50 PM<br />This is the 1st talk in <a href='session-310.html'>AI-Driven Design and Optimization of Future Electronics - Part I of II</a> (2:35 PM&ndash;4:15 PM)<br />E107<br /><br /><small>Artificial intelligence (AI) technologies have incentivized paradigm shift for a wide range of domain science areas. Specifically, in the field of electronics devices and systems, by embedding AI technologies, we can significantly reduce the time and cost to the design and optimization process. In this mini-symposium, we will introduce several state-of-the-art works on facilitating AI in wave and material modeling. The presentations will vary across physics-informed neural networks (PINN), kernel-based regressions, quantum machine learning, machine learning and variable-fidelity approaches. We will also address the revolution in microelectronics and high-frequency device design with AI acceleration.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75698' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1409' style='display:block'><a href='javascript:toggle_star(1409)' class='star'><span class='star1409'>&star;</span></a> <b>2:55 PM&ndash;3:10 PM (E107)</b> Shutong Qi, Neural Networks for Fast Simulation of Multiphysics Interactions of Electromagnetic Fields <span id='bitlink-1294'><small><a href='javascript:show_bit(1294)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1294' style='display:none'><small><a href='javascript:hide_bit(1294)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Neural Networks for Fast Simulation of Multiphysics Interactions of Electromagnetic Fields</b><br />Shutong Qi<br />Thursday, March 2 2:55 PM&ndash;3:10 PM<br />This is the 2nd talk in <a href='session-310.html'>AI-Driven Design and Optimization of Future Electronics - Part I of II</a> (2:35 PM&ndash;4:15 PM)<br />E107<br /><br /><small>This paper presents neural network architectures that can be efficiently trained to replace one or more solvers in multiphysics simulations involving electromagnetic fields. We focus on electromagnetic/thermal simulations, where Maxwell’s equations are jointly solved with the heat equation in lossy media. In particular, neural networks are used to replace the heat equation solver and directly produce the transient and steady state temperature distribution within the medium, using the material properties and the electric field components, computed by a Finite-Difference Time-Domain (FDTD) simulation. Hence, the multiphysics simulation is greatly simplified, as it relies on a single-physics (electromagnetic) solver, combined with a neural network.    
+     
+The training of the network is based on an unsupervised strategy, where the heat equation is directly implemented as a loss function of the network. This approach is compared to the conventional supervised strategy of using the mean square error (MSE) between ground truth data (produced by a finite difference solver for the heat equation) and the network prediction for the temperature. We demonstrate the accuracy and computational efficiency of this approach for general multiphysics problems and its applications to the modeling of microwave hyperthermia scenarios in biological tissues.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75698' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1410' style='display:block'><a href='javascript:toggle_star(1410)' class='star'><span class='star1410'>&star;</span></a> <b>3:15 PM&ndash;3:30 PM (E107)</b> Riccardo Trinchero, Kernel-Based Regressions for Vector-Valued Problems in Microwave Applications <span id='bitlink-1295'><small><a href='javascript:show_bit(1295)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1295' style='display:none'><small><a href='javascript:hide_bit(1295)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Kernel-Based Regressions for Vector-Valued Problems in Microwave Applications</b><br />Riccardo Trinchero<br />Thursday, March 2 3:15 PM&ndash;3:30 PM<br />This is the 3rd talk in <a href='session-310.html'>AI-Driven Design and Optimization of Future Electronics - Part I of II</a> (2:35 PM&ndash;4:15 PM)<br />E107<br /><br /><small>This talk presents a modeling framework for vector-valued functions based on the multi-output kernel Ridge regression (KRR). The proposed formulation of the KRR relies on a generalized definition of the reproducing kernel Hilbert space (RKHS) to the case of vector-valued functions, thus bridging the gap between multi-output Artificial Neural Network (NN) structures and standard scalar kernel-based approaches. The above multi-output formulation of the KRR can be suitably adopted to train a vector-output surrogate model able to predict the frequency responses of parametric microwave structures affected by several parameters with large variability. Its performance, in terms of parametric and stochastic analysis, is compared with the ones provided by two state-of-the-art techniques, such as the combination of the principal components analysis (PCA) and the least-squares support vector machine (LS-SVM) regression and a multi-output feed-forward NN structure.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75698' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

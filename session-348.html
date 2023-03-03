@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Recent Advances in Federated Learning and Differential Privacy</h2><div class='index-talk' id='talk1575' style='display:block'><a href='javascript:toggle_star(1575)' class='star'><span class='star1575'>&star;</span></a> <b>4:45 PM&ndash;5:00 PM (E106)</b> Ravi Madduri, Application of Privacy Preserving Federated Learning in Biomedical Applications &#8211; Lessons Learned <span id='bitlink-1446'><small><a href='javascript:show_bit(1446)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1446' style='display:none'><small><a href='javascript:hide_bit(1446)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Application of Privacy Preserving Federated Learning in Biomedical Applications &#8211; Lessons Learned</b><br />Ravi Madduri<br />Thursday, March 2 4:45 PM&ndash;5:00 PM<br />This is the 1st talk in <a href='session-348.html'>Recent Advances in Federated Learning and Differential Privacy</a> (4:45 PM&ndash;6:25 PM)<br />E106<br /><br /><small>AI/ML models are known to be vulnerable to dataset shift and under specification because of the inability of current deep learning methods to learn the casual structure. This problem manifests when a model is deployed in a real test domain, where even simple changes in demographics or image formats could lead to unexpected poor performance, straining credibility. The solution for this is to train deep learning models on as many as real world datasets as possible. But access to biomedical datasets is governed by complex data usage agreements, time-consuming IRBs. One possible solution is to send models to data and develop frameworks to perform secure federated learning with privacy guarantees. In this talk I will present the Argonne Privacy Preserving Federated Learning Framework (APPFL) and adopting the framework to challenges in biomedicine.     </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75773' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1576' style='display:block'><a href='javascript:toggle_star(1576)' class='star'><span class='star1576'>&star;</span></a> <b>5:05 PM&ndash;5:20 PM (E106)</b> Abolfazl Hashemi, Discarding the Magnitude of Client-Server Messages for Privacy-Preserving Federated Learning <span id='bitlink-1447'><small><a href='javascript:show_bit(1447)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1447' style='display:none'><small><a href='javascript:hide_bit(1447)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Discarding the Magnitude of Client-Server Messages for Privacy-Preserving Federated Learning</b><br />Abolfazl Hashemi<br />Thursday, March 2 5:05 PM&ndash;5:20 PM<br />This is the 2nd talk in <a href='session-348.html'>Recent Advances in Federated Learning and Differential Privacy</a> (4:45 PM&ndash;6:25 PM)<br />E106<br /><br /><small>There is a dearth of convergence results for differentially private federated learning (FL) with non-Lipschitz objective functions (i.e., when gradient norms are not bounded). The primary reason for this is that the clipping operation (i.e., projection onto an $l_2$ ball of a fixed radius called the clipping threshold) for bounding the sensitivity of the average update to each client's update introduces bias depending on the clipping threshold and the number of local steps in FL, and analyzing this is not easy. For Lipschitz functions, the Lipschitz constant serves as a trivial clipping threshold with zero bias. However, Lipschitzness does not hold in many practical settings; moreover, verifying it and computing the Lipschitz constant is hard. Thus, the choice of the clipping threshold is non-trivial and requires a lot of tuning in practice.  In this work, we provide the first convergence result for private FL with clipping on smooth convex objectives for a general clipping threshold-- without assuming Lipschitzness. We also look at a simpler alternative to clipping (for bounding sensitivity) which is normalization -- where we use only a scaled version of the unit vector along the client updates, completely discarding the magnitude information. The resulting normalization-based private FL algorithm is theoretically shown to have better convergence than its clipping-based counterpart on smooth convex functions.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75773' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1577' style='display:block'><a href='javascript:toggle_star(1577)' class='star'><span class='star1577'>&star;</span></a> <b>5:25 PM&ndash;5:40 PM (E106)</b> Victoria L&#243;pez, Verification of the Integration Process and Aggregation of Health Data from Portable Sensors <span id='bitlink-1448'><small><a href='javascript:show_bit(1448)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1448' style='display:none'><small><a href='javascript:hide_bit(1448)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Verification of the Integration Process and Aggregation of Health Data from Portable Sensors</b><br />Victoria L&#243;pez<br />Thursday, March 2 5:25 PM&ndash;5:40 PM<br />This is the 3rd talk in <a href='session-348.html'>Recent Advances in Federated Learning and Differential Privacy</a> (4:45 PM&ndash;6:25 PM)<br />E106<br /><br /><small>Wearable devices are increasingly useful for the personalization of medical treatments. The manufacturers of these devices apply algorithms for aggregation and dimensionality reduction of the raw data collected to show the client a more user-friendly version that is easier to interpret. However, neither the raw data nor the details of the aggregation process are provided by the manufacturer, so in most cases they function as a black box for the user. Given the relevance of the information presented to the user, its application and the consequences of its interpretation (behavior modification, medication administration, etc.), it is essential to verify the algorithms used in the process to guarantee that the information presented really corresponds to the information collected by the sensors. In this work we present a suitable system for the verification of aggregated data from personal activity monitoring sensors. The system includes a parsing algorithm that does the data structure and relates it to the output. The effectiveness of the algorithm has been tested with real data over a period of two years and both for daytime activity and for monitoring sleep quality. The algorithm is perfectly scalable to be used in any device, so the computer system presented can be useful for the future computer audit of this type of process.    
+	  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75773' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

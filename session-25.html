@@ -1,0 +1,53 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Research Software Engineering with Julia - Part II of II</h2><div class='index-talk' id='talk112' style='display:block'><a href='javascript:toggle_star(112)' class='star'><span class='star112'>&star;</span></a> <b>1:50 PM&ndash;2:05 PM (G105)</b> Samuel Omlin, Scientific Supercomputing with Julia - Insights from HPC Experts and Domain Scientists <span id='bitlink-106'><small><a href='javascript:show_bit(106)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-106' style='display:none'><small><a href='javascript:hide_bit(106)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Scientific Supercomputing with Julia - Insights from HPC Experts and Domain Scientists</b><br />Samuel Omlin<br />Monday, February 27 1:50 PM&ndash;2:05 PM<br />This is the 1st talk in <a href='session-25.html'>Research Software Engineering with Julia - Part II of II</a> (1:50 PM&ndash;3:30 PM)<br />G105<br /><br /><small>We present an efficient approach for the development of nonlinear multi-physics applications written in Julia which are deployable on next generation xPU supercomputers. Powerful costless abstractions, metaprogramming and multiple dispatch enable writing a single code that is suitable for both productive prototyping on a single CPU thread and large scale production runs on GPU or CPU supercomputers. High performance stencil computations can be expressed with math-close notation in hardware-agnostic kernels for which launch parameters are automatically derivable from the kernel arguments. Halo updates required for distributed memory parallelization can be triggered with a single function call, can fully and automatically overlap with computations and reach performance close to hardware limit. We outline the wide applicability of our approach by reporting on multiple multi-xPU solvers for geosciences as, e.g., 3D solvers for poro-visco-elastic two-phase flow and for reactive porosity waves. The solvers achieve high performance and scale close to ideally on thousands of NVIDIA Tesla P100 GPUs at the Swiss National Supercomputing Centre. Moreover, we have shown in recent contributions that our approach is naturally in no way limited to geosciences: we have showcased a computational cognitive neuroscience application modelling visual target selection and a quantum fluid dynamics solver using the nonlinear Gross-Pitaevski equation.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75233' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk113' style='display:block'><a href='javascript:toggle_star(113)' class='star'><span class='star113'>&star;</span></a> <b>2:10 PM&ndash;2:25 PM (G105)</b> Christopher V. Rackauckas, The Sciml Common Solver Interface <span id='bitlink-107'><small><a href='javascript:show_bit(107)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-107' style='display:none'><small><a href='javascript:hide_bit(107)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>The Sciml Common Solver Interface</b><br />Christopher V. Rackauckas<br />Monday, February 27 2:10 PM&ndash;2:25 PM<br />This is the 2nd talk in <a href='session-25.html'>Research Software Engineering with Julia - Part II of II</a> (1:50 PM&ndash;3:30 PM)<br />G105<br /><br /><small>The SciML common interface is an abstraction to automating scientific machine learning, the connection of machine learning libraries to traditional scientific computing. In this talk we will walk through the SciML common interface and how its design connects to the intricacies of the numerical methods. We will dive into details of how automatic differentiation is mixed with analytical adjoints of equation solvers to achieve better performance than either technique alone, the automation of solver choices through open benchmarking platforms, and how abstract hierarchical interfaces are used to classify algorithms into new generic forms. We will detail how these algorithms within the SciML software suite which are leading to techniques, such as for the automated construction of differential equation systems from agent-based based systems through new discrete-stochastic automatic differentiation engines, along with advancements in ODE solver software which have come by integrating neural networks into the methods.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75233' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk114' style='display:block'><a href='javascript:toggle_star(114)' class='star'><span class='star114'>&star;</span></a> <b>2:30 PM&ndash;2:45 PM (G105)</b> J&#252;rgen Fuhrmann, VORONOIFVM.JL - a Multiphysics Finite Volume Solver for Elliptic and Parabolic Systems <span id='bitlink-108'><small><a href='javascript:show_bit(108)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-108' style='display:none'><small><a href='javascript:hide_bit(108)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>VORONOIFVM.JL - a Multiphysics Finite Volume Solver for Elliptic and Parabolic Systems</b><br />J&#252;rgen Fuhrmann<br />Monday, February 27 2:30 PM&ndash;2:45 PM<br />This is the 3rd talk in <a href='session-25.html'>Research Software Engineering with Julia - Part II of II</a> (1:50 PM&ndash;3:30 PM)<br />G105<br /><br /><small>The two point flux Voronoi finite volume method on boundary conforming  Delaunay meshes provides framework  for developing discretizations for  nonlinear  elliptic  and  parabolic  systems which  conform  to  first  principles  of physics  like  mass  conservation, maximum  principles,  positivity of concentrations, decay of discrete free energy.    
+Closely oriented  at the structure  of this method,  the VoronoiFVM.jl  package allows to specify systems of partial differential equations on  one-,  two-  and  three-dimensional  domains  by  providing  nonlinear  reaction, boundary,  storage and  flux functions,  and a  simplex grid  representing the domain geometry.  Newton's method in combination with  various  linear  solvers  is  used to  solve  the  discrete  nonlinear  problems.    
+The package takes advantage of  several features of the Julia language  which will be highlighted during the talk:    
+   Automatic differentiation based on ForwardDiff.jl for the assembly of Jacobi matrices   Composability with ODE and DAE solvers from DifferentialEquations.jl   Dependency managememt via the Julia package manager      
+Among  other topics,  the  package is  used  for numerically  modeling  semiconductor devices, electrochemical systems. Corresponding examples  will conclude the talk.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75233' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

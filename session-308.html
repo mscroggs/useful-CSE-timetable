@@ -1,0 +1,57 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Recent Advances in Combinatorial Scientific Computing - Part I of II</h2><div class='index-talk' id='talk1399' style='display:block'><a href='javascript:toggle_star(1399)' class='star'><span class='star1399'>&star;</span></a> <b>9:45 AM&ndash;10:00 AM (D508)</b> Christian Schulz, Recent Advances in Streaming (Hyper)Graph Partitioning <span id='bitlink-1286'><small><a href='javascript:show_bit(1286)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1286' style='display:none'><small><a href='javascript:hide_bit(1286)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Recent Advances in Streaming (Hyper)Graph Partitioning</b><br />Christian Schulz<br />Monday, February 27 9:45 AM&ndash;10:00 AM<br />This is the 1st talk in <a href='session-308.html'>Recent Advances in Combinatorial Scientific Computing - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />D508<br /><br /><small>Partitioning a (hyper)graph into balanced blocks such that few edges run between blocks is a key problem for large-scale distributed processing. Currently there is a gap in the space of available algorithms. On the one hand, streaming algorithms have been adopted to partition massive graph data on small machines. In the streaming model, vertices arrive one at a time and then are directly assigned to a block. These algorithms partition huge graphs quickly with little memory, but produce partitions with low solution quality. On the other hand, there are offline (shared-memory) multilevel algorithms that produce partitions with high quality but also need a machine with enough memory to partition huge networks.    
+In this talk, we present recent advances in streaming algorithms for the problem. First, we present a buffered streaming approach: this model allows to read more than one node and its neighborhood at the time. This enables our algorithm to leverage multilevel techniques, and thus significantly improve solution quality while surprisingly also enhancing the overall complexity of the algorithm.    
+On the other hand, we present a shared-memory streaming multi-recursive partitioning scheme that performs recursive multi-sections on the fly without knowing the overall input graph to compute hierarchical partitionings.  If the topology of a distributed system is known, it is possible to further optimize the communication costs by mapping partitions onto processing elements.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75696' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1400' style='display:block'><a href='javascript:toggle_star(1400)' class='star'><span class='star1400'>&star;</span></a> <b>10:05 AM&ndash;10:20 AM (D508)</b> Fran&#231;ois Pellegrini, Design and Implementation of Multi-Threaded and Hybrid Parallel Graph Partitioning Algorithms in Scotch v7 <span id='bitlink-1287'><small><a href='javascript:show_bit(1287)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1287' style='display:none'><small><a href='javascript:hide_bit(1287)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Design and Implementation of Multi-Threaded and Hybrid Parallel Graph Partitioning Algorithms in Scotch v7</b><br />Fran&#231;ois Pellegrini<br />Monday, February 27 10:05 AM&ndash;10:20 AM<br />This is the 2nd talk in <a href='session-308.html'>Recent Advances in Combinatorial Scientific Computing - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />D508<br /><br /><small>Graph partitioning is a ubiquitous problem which has many applications in scientific computing. Due to the ever increasing size of the problems to solve, many parallel implementations of graph partitioning algorithms have been proposed in the literature, whether for shared-memory multiprocessors or distributed-memory multicomputers.    
+This paper describes the design and implementation of multi-threaded algorithms in version 7 of the Scotch partitioning package. These algorithms concern both the formerly sequential version, Scotch, and the parallel, distributed-memory version, PT-Scotch. Notably, a hybrid parallel (MPI+threads) graph coarsening algorithm is proposed, which is used to accelerate the classic multilevel partitioning framework. In order to provide scientific reproducibility, deterministic algorithms have been implemented whenever possible, and can be selected at the user's choice. Concurrent execution is made possible by the encapsulation of partitioning tasks within execution contexts.    
+While a global linear speedup is out of reach due to the many remaining non-parallel sections, the multi-threaded algorithms evidence high scalability themselves, and provide for a significant improvement in run time, without any loss in partition quality.    
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75696' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1401' style='display:block'><a href='javascript:toggle_star(1401)' class='star'><span class='star1401'>&star;</span></a> <b>10:25 AM&ndash;10:40 AM (D508)</b> Hubert Hirtz, Exploring Mesh Partitioning with the Coupe Partitioning Platform <span id='bitlink-1288'><small><a href='javascript:show_bit(1288)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1288' style='display:none'><small><a href='javascript:hide_bit(1288)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Exploring Mesh Partitioning with the Coupe Partitioning Platform</b><br />Hubert Hirtz<br />Monday, February 27 10:25 AM&ndash;10:40 AM<br />This is the 3rd talk in <a href='session-308.html'>Recent Advances in Combinatorial Scientific Computing - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />D508<br /><br /><small>Coupe is a dedicated mesh partitioner, written in Rust. It implements,  in parallel using shared memory, different partitioning models for load  balancing mesh based scientific simumations. We will present how  coupling a number of partitioning algorithms along with geometric  partitioning and topological refinement can become an alternative to  classical multi-level graph partitioners.    
+    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75696' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1402' style='display:block'><a href='javascript:toggle_star(1402)' class='star'><span class='star1402'>&star;</span></a> <b>10:45 AM&ndash;11:00 AM (D508)</b> Noa Vaknin, Pebbling Game and Alternative Basis for High Performance Matrix Multiplication <span id='bitlink-1289'><small><a href='javascript:show_bit(1289)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1289' style='display:none'><small><a href='javascript:hide_bit(1289)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Pebbling Game and Alternative Basis for High Performance Matrix Multiplication</b><br />Noa Vaknin<br />Monday, February 27 10:45 AM&ndash;11:00 AM<br />This is the 4th talk in <a href='session-308.html'>Recent Advances in Combinatorial Scientific Computing - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />D508<br /><br /><small>Matrix multiplication is one of the most extensively used kernels in scientific computing. Although sub-cubic algorithms exist, most high performance implementations are based on the classical $\Theta\left(n^{3}\right)$ matrix multiplication. Designing an algorithm that obtains even modest improvements in performance over existing implementations, requires carefully addressing challenges such as reducing computation costs, communication costs, and memory footprint.    
+We provide the first high performance general matrix-matrix multiplication that utilizes the alternative basis method on Strassen's algorithm. We reduce the basis transformations overheads and decrease the memory footprint of the bilinear phase by using the pebbling game optimization scheme, consequentially improving both arithmetic and communication costs. Our algorithm outperforms DGEMM on feasible matrix dimensions starting at $n=1024$. It obtains an increasing speedup up to nearly $\times2$ speedup for larger matrix dimensions.    
+Joint work with Oded Schwartz.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75696' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

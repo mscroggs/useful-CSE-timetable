@@ -1,0 +1,54 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Software and Algorithms for Integral Equations and Boundary Element Methods - Part II of II</h2><div class='index-talk' id='talk1557' style='display:block'><a href='javascript:toggle_star(1557)' class='star'><span class='star1557'>&star;</span></a> <b>1:50 PM&ndash;2:05 PM (D407)</b> Christopher D. Cooper, A Boundary-Integral Computational Framework for Molecular Electrostatics Modeling <span id='bitlink-1430'><small><a href='javascript:show_bit(1430)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1430' style='display:none'><small><a href='javascript:hide_bit(1430)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>A Boundary-Integral Computational Framework for Molecular Electrostatics Modeling</b><br />Christopher D. Cooper<br />Wednesday, March 1 1:50 PM&ndash;2:05 PM<br />This is the 1st talk in <a href='session-343.html'>Software and Algorithms for Integral Equations and Boundary Element Methods - Part II of II</a> (1:50 PM&ndash;3:30 PM)<br />D407<br /><br /><small>Even though in molecular solvation small atomic-level scales are important, continuum models can take us a long way. In the case of electrostatics, they give rise to a system of partial differential equations where the Poisson and Poisson-Boltzmann equations are coupled on a molecular surface, which interfaces the solute and solvent regions. A boundary-integral approach is a natural choice to simulate such system, as the interface and Dirac delta-like charge distributions are accurately represented. There are a number of Poisson-Boltzmann solvers available that are widely used, however, they fall short in terms of usability in a larger computational workflow, and extensibility to incorporate modifications to the model. In this talk, we will introduce the Poisson-Boltzmann & Jupyter (PB&J) code, a boundary integral solver based on Bempp-cl, designed to be easy to use and extend without sacrificing accuracy or speed. We will review the main design principles and present application examples showing its efficiency in terms of user and computer time. Moreover, this Python-based approach is aligned with current developments in computational chemistry and biophysics, making it possible to integrate into existing computational workflows for multiscale modeling or analysis software, straight from a Jupyter notebook.    
+    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75755' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1558' style='display:block'><a href='javascript:toggle_star(1558)' class='star'><span class='star1558'>&star;</span></a> <b>2:10 PM&ndash;2:25 PM (D407)</b> Isuru D. Fernando, Automatic Synthesis of Fast Algorithms for the Solution of Elliptic PDEs <span id='bitlink-1431'><small><a href='javascript:show_bit(1431)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1431' style='display:none'><small><a href='javascript:hide_bit(1431)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Automatic Synthesis of Fast Algorithms for the Solution of Elliptic PDEs</b><br />Isuru D. Fernando<br />Wednesday, March 1 2:10 PM&ndash;2:25 PM<br />This is the 2nd talk in <a href='session-343.html'>Software and Algorithms for Integral Equations and Boundary Element Methods - Part II of II</a> (1:50 PM&ndash;3:30 PM)<br />D407<br /><br /><small>When using the Fast Multipole Method to evaluate a potential satisfying a Elliptic  PDE, we can exploit the knowledge about the potential and the PDE to reduce the  cost of the FMM. In this talk, we present two methods that make use of  the symbolic form of the potential and the symbolic form of the PDE given by the  user to synthesize efficient FMM code.    
+First we describe a method that automatically synthesizes low complexity   translation operators for arbitrary potentials satisfying an elliptic PDE using a compression scheme. These operators have the same complexity as the state of the art spherical/plane wave based translation operators. We observe the asymptotic time complexities for these operators and also give an upper bound on the error in the compression scheme.    
+Next we outline a method that automatically synthesizes execution plans for an integral equation representation involving multiple input Green's function and multiple outputs. We introduce tools to reduce the number of FMM calls needed by doing algebraic manipulations on the symbolic integral equation representation.    
+Finally, we describe applications where our methods are able to synthesize  efficient execution plans and generate efficient code for each FMM in the  execution plan.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75755' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1559' style='display:block'><a href='javascript:toggle_star(1559)' class='star'><span class='star1559'>&star;</span></a> <b>2:30 PM&ndash;2:45 PM (D407)</b> Han D. Tran, Regularization of the Boundary Integral Equations for Crack Problems in 2D Multi-Field Media <span id='bitlink-1432'><small><a href='javascript:show_bit(1432)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1432' style='display:none'><small><a href='javascript:hide_bit(1432)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Regularization of the Boundary Integral Equations for Crack Problems in 2D Multi-Field Media</b><br />Han D. Tran<br />Wednesday, March 1 2:30 PM&ndash;2:45 PM<br />This is the 3rd talk in <a href='session-343.html'>Software and Algorithms for Integral Equations and Boundary Element Methods - Part II of II</a> (1:50 PM&ndash;3:30 PM)<br />D407<br /><br /><small>The Boundary Element Method (BEM) is a powerful technique for modeling cracks and simulating crack growth since the governing equations involve only integrals over the boundary and the surface of the crack. However, the integral equations on which the standard BEM is based contain strongly-singular and hyper-singular kernels. Consequently, special theoretical and numerical treatment is required in implementing the method. In this talk, I will present a systematic procedure to develop a set of regularized boundary integral equations for modeling cracks in 2D linear multi-field media. The class of media treated is quite general and includes, in special cases, anisotropic elasticity, piezo-electricity, and magneto-electro-elasticity. The development of a pair of weakly-singular weak-form integral equations for ‘generalized displacement’ and ‘generalized traction’ is of particular interest. These equations are the basis of a weakly-singular Symmetric Galerkin BEM. The developed weak-form boundary integral equations are completely regularized in that all kernels that appear are (at most) weakly singular of order ln(r), where r is the distance between the source and field points. This feature allows standard Co elements to be utilized everywhere except at crack tips. I also present the development of a special crack-tip element that incorporates extra degrees of freedom at the tip node so that the ‘generalized stress intensity factors’ are obtained directly from the solution to the system of discretized equations. To verify the accuracy and versatility of the method, we examined various numerical examples in both infinite and finite domains. It is seen that highly accurate results for the relevant fracture data (i.e., the ‘generalized stress intensity factors’) can be obtained using relatively coarse meshes.    
+    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75755' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

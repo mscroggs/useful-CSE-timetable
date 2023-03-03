@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Neural Network Solvers for Differential Equations - Part II of II</h2><div class='index-talk' id='talk58' style='display:block'><a href='javascript:toggle_star(58)' class='star'><span class='star58'>&star;</span></a> <b>2:15 PM&ndash;2:30 PM (E107)</b> Johannes Brandstetter, Equipping Neural PDE Surrogates with Better Geometric Priors <span id='bitlink-56'><small><a href='javascript:show_bit(56)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-56' style='display:none'><small><a href='javascript:hide_bit(56)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Equipping Neural PDE Surrogates with Better Geometric Priors</b><br />Johannes Brandstetter<br />Tuesday, February 28 2:15 PM&ndash;2:30 PM<br />This is the 1st talk in <a href='session-13.html'>Neural Network Solvers for Differential Equations - Part II of II</a> (2:15 PM&ndash;3:55 PM)<br />E107<br /><br /><small>Partial differential equations (PDEs) see widespread use in sciences and engineering to describe simulation of physical processes as scalar and vector fields interacting and coevolving over time.  Due to the computationally expensive nature of their standard solution methods, neural PDE surrogates have become an active research topic to accelerate these simulations.  However, the practical utility of training such surrogates is contingent on their ability to model complex multi-scale spatio-temporal phenomena.  In this talk, we address two challenges of neural network PDE surrogates:  (i)  How to take into account the relationship between different fields and their internal components, which are often correlated?  We therefore view the time evolution of correlated fields through the lens of multivector fields allows which allows us to introduce new operations that are grounded on the algebraic properties of Clifford algebras.  (ii) How to model multi-scale phenomena and generalize across timescales and equations? We therefore analyze design considerations of Fourier and U-Net based PDE surrogate models, showing promising results on generalization to different PDE parameters and time-scales with a single surrogate model.  We conclude by given an outlook how the proposed methods directly help to tackle imminent challenges in neural PDE surrogate modeling.    
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75204' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk59' style='display:block'><a href='javascript:toggle_star(59)' class='star'><span class='star59'>&star;</span></a> <b>2:35 PM&ndash;2:50 PM (E107)</b> Jonathan Citrin, Fusion Plasma Turbulence Simulation with Neural Network Surrogate Models <span id='bitlink-57'><small><a href='javascript:show_bit(57)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-57' style='display:none'><small><a href='javascript:hide_bit(57)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Fusion Plasma Turbulence Simulation with Neural Network Surrogate Models</b><br />Jonathan Citrin<br />Tuesday, February 28 2:35 PM&ndash;2:50 PM<br />This is the 2nd talk in <a href='session-13.html'>Neural Network Solvers for Differential Equations - Part II of II</a> (2:15 PM&ndash;3:55 PM)<br />E107<br /><br /><small>Accurate predictive modelling of tokamak turbulence is a key component of multiphysics simulation of fusion reactors. Many-query applications such as scenario optimization, experimental design, and controller design, demands both fast and accurate modelling, infeasible with direct numerical simulation. Surrogate models generated with machine learning methods circumvent the conflicting constraints of accuracy and tractability. A key enabling step is the development of reduced-order models, validated by direct numerical simulation. Reduced-order model calculation time is then sufficient for constructing extensive databases of model input-output mappings using HPC resources. These are used as training sets for neural network regression. A key aspect is the physics-informed customization of regression variables and optimization cost functions, to capture known features of the system. The resultant surrogate models accurately reproduce the original reduced-order turbulence model with significant speedup, providing near-realtime capability, 1 trillion times faster than the anchoring direct numerical simulations. We summarize the state-of-the-art in tokamak turbulent transport neural network surrogate development, ranging from practical considerations on label generation, model training, and demonstration applications for scenario optimization at the JET tokamak and extrapolations to the next-generation ITER performance.     
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75204' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk60' style='display:block'><a href='javascript:toggle_star(60)' class='star'><span class='star60'>&star;</span></a> <b>2:55 PM&ndash;3:10 PM (E107)</b> Max Kerr Winter, Using Deep Neural Networks to Learn Memory Effects in Integro-Differential Equations <span id='bitlink-58'><small><a href='javascript:show_bit(58)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-58' style='display:none'><small><a href='javascript:hide_bit(58)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Using Deep Neural Networks to Learn Memory Effects in Integro-Differential Equations</b><br />Max Kerr Winter<br />Tuesday, February 28 2:55 PM&ndash;3:10 PM<br />This is the 3rd talk in <a href='session-13.html'>Neural Network Solvers for Differential Equations - Part II of II</a> (2:15 PM&ndash;3:55 PM)<br />E107<br /><br /><small>Memory effects are ubiquitous in a wide variety of complex physical phenomena, ranging from climate models and metamaterials to glassy dynamics. The Generalised Langevin Equation formalism provides a rigorous way to describe all memory effects via the so-called memory kernel in an integro-differential equation. However, the memory kernel is often unknown, and accurately predicting or measuring it via e.g. a numerical inverse Laplace transform remains a herculean task. In this talk we will first review the importance and difficulties of measuring realistic memory kernels, and describe our recent progress using deep neural networks (DNNs) to tackle this problem. We demonstrate that DNNs are remarkably robust against noisy data and can therefore successfully circumvent the bottleneck that plagues conventional inverse Laplace transform approaches. Furthermore we show that DNNs are capable of tackling the notoriously long-lived memory effects of glassy systems. Our work will provide a general purpose tool for extracting memory kernels from glasses and supercooled liquids, and, with sufficient data, from a broad range of other non-Markovian systems.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75204' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

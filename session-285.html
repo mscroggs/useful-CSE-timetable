@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>SYCL's Impact on Algorithms, Data Structures and Implementations - Part I of II</h2><div class='index-talk' id='talk1292' style='display:block'><a href='javascript:toggle_star(1292)' class='star'><span class='star1292'>&star;</span></a> <b>9:45 AM&ndash;10:00 AM (G104)</b> Tom Deakin, Vision and Scope of the SYCL Minisymposium <span id='bitlink-1193'><small><a href='javascript:show_bit(1193)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1193' style='display:none'><small><a href='javascript:hide_bit(1193)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Vision and Scope of the SYCL Minisymposium</b><br />Tom Deakin<br />Monday, February 27 9:45 AM&ndash;10:00 AM<br />This is the 1st talk in <a href='session-285.html'>SYCL's Impact on Algorithms, Data Structures and Implementations - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />G104<br /><br /><small>SYCL is a heterogeneous parallel programming model, stewarded by the Khronos Group. The open standard offers portable heterogenenous parallel programming in modern C++. For scientific and engineering simulation and analysis codes, SYCL therefore offers the potential for applications to be performance portable, i.e., for the codes to attain high levels of performance across a range of CPU and GPU devices from different vendors, in a productive way.    
+This talk will briefly introduce the key concepts in the SYCL programming model itself, so this minisymposium will be accessible to tall no matter their prior experience of SYCL. Heterogeneous programming models needs to be able to describe the underlying hardware, and enable programmers to write programs which control the location of their data, and the location of computation on that data. I will discuss how these abstractions in the SYCL programming model enable portability and create the potential for performance, and hence strive for performance portabilily. I will finish this talk with a survey of how the current SYCL ecosystem stands with respect to this goal. This will set the stage for this minisymposium, where SYCL will be explored in a wide range of different application areas.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75641' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1293' style='display:block'><a href='javascript:toggle_star(1293)' class='star'><span class='star1293'>&star;</span></a> <b>10:05 AM&ndash;10:20 AM (G104)</b> Igor Baratta, Performance-Portable Matrix-Free Finite Element Solvers with SYCL <span id='bitlink-1194'><small><a href='javascript:show_bit(1194)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1194' style='display:none'><small><a href='javascript:hide_bit(1194)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Performance-Portable Matrix-Free Finite Element Solvers with SYCL</b><br />Igor Baratta<br />Monday, February 27 10:05 AM&ndash;10:20 AM<br />This is the 2nd talk in <a href='session-285.html'>SYCL's Impact on Algorithms, Data Structures and Implementations - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />G104<br /><br /><small>In this talk, we discuss and demonstrate how performance-portable matrix-free finite element solvers can be developed in SYCL and how the algorithms can be adapted to match the performance characteristics of the target hardware. For that, we present a performance model that can guide the choice of algorithm and optimization strategies to apply. The performance model takes into consideration both implementation aspects and hardware performance metrics such as arithmetic peak performance.  Finally, we will present performance results for different CPU and GPU architectures, including AMD Milan and Intel Icelake CPU nodes, and NVIDIA A100 and AMD Instinct™ MI100 accelerators. The numerical experiments together with the performance model show that our SYCL implementation is able to achieve a reasonable fraction of peak performance on a wide variety of platforms, however it may require not only different kernels implementations for different devices but also different algorithms.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75641' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1294' style='display:block'><a href='javascript:toggle_star(1294)' class='star'><span class='star1294'>&star;</span></a> <b>10:25 AM&ndash;10:40 AM (G104)</b> Hatem Ltaief, Making HiCMA Hardware-Agnostic with SYCL <span id='bitlink-1195'><small><a href='javascript:show_bit(1195)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1195' style='display:none'><small><a href='javascript:hide_bit(1195)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Making HiCMA Hardware-Agnostic with SYCL</b><br />Hatem Ltaief<br />Monday, February 27 10:25 AM&ndash;10:40 AM<br />This is the 3rd talk in <a href='session-285.html'>SYCL's Impact on Algorithms, Data Structures and Implementations - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />G104<br /><br /><small>This talk reports on user experiences and performance analysis of porting the Hierarchical Computations on Manycore Architectures (HiCMA) software to SYCL. We target systems including x86 and hardware accelerators from various vendors. We assess performance portability using scientific applications powered by HiCMA, while achieving high user-productivity.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75641' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1295' style='display:block'><a href='javascript:toggle_star(1295)' class='star'><span class='star1295'>&star;</span></a> <b>10:45 AM&ndash;11:00 AM (G104)</b> Ravil Dorozhinskii, Performance-Portable Earthquake Simulation with SeisSol and SYCL <span id='bitlink-1196'><small><a href='javascript:show_bit(1196)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1196' style='display:none'><small><a href='javascript:hide_bit(1196)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Performance-Portable Earthquake Simulation with SeisSol and SYCL</b><br />Ravil Dorozhinskii<br />Monday, February 27 10:45 AM&ndash;11:00 AM<br />This is the 4th talk in <a href='session-285.html'>SYCL's Impact on Algorithms, Data Structures and Implementations - Part I of II</a> (9:45 AM&ndash;11:25 AM)<br />G104<br /><br /><small>SeisSol is a high-performance simulation package for large-scale simulation of earthquakes and seismic phenomena. It solves the seismic wave equations in various material models using high-order discontinuous Galerkin with ADER time stepping. To tackle the demands of managing model variations and achieving high performance on various CPU and GPU architectures, SeisSol uses a custom-built DSL and code generator, YATeTo (Yet Another Tensor Toolkit), as an abstraction layer for implementation. We will report on recent work and results obtained with a SYCL backend for YATeTo and we will discuss benefits of SYCL over OpenMP for the implementation of dynamic rupture simulation in SeisSol.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75641' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

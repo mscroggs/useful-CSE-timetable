@@ -1,0 +1,52 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Numerical Filtering and Property Preserving Methods - Part I of II</h2><div class='index-talk' id='talk1285' style='display:block'><a href='javascript:toggle_star(1285)' class='star'><span class='star1285'>&star;</span></a> <b>4:00 PM&ndash;4:15 PM (E101)</b> Matthew Picklo, Beyond Uniform Meshes: Filtering and Enhancement with LSIAC-MRA <span id='bitlink-1187'><small><a href='javascript:show_bit(1187)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1187' style='display:none'><small><a href='javascript:hide_bit(1187)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Beyond Uniform Meshes: Filtering and Enhancement with LSIAC-MRA</b><br />Matthew Picklo<br />Wednesday, March 1 4:00 PM&ndash;4:15 PM<br />This is the 1st talk in <a href='session-283.html'>Numerical Filtering and Property Preserving Methods - Part I of II</a> (4:00 PM&ndash;5:40 PM)<br />E101<br /><br /><small>Multiresolution Analysis (MRA) is a useful technique for mesh adaptivity when numerically solving PDEs with discontinuities or other interesting features.  It allows for a direct relation of approximations on a coarse mesh with approximations on a fine mesh, enabling adaptive and sparse solvers for PDEs.   The critical concept is interpreting a fine mesh approximation as a coarse mesh approximation with additional finer details. Using this hierarchy, it is simple to move an approximation from a fine mesh to a coarse mesh by truncation of detail coefficients. Doing the reverse is more challenging and requires a reconstruction procedure to generate fine mesh data from coarse information. It is for this purpose we consider the Line Smoothness-Increasing Accuracy-Conserving MRA (LSIAC-MRA) procedure for obtaining detail coefficients. This technique utilizes filtering methods together with multi-wavelet MRA principles to enable the transition of data from coarse to fine resolutions, simultaneously decreasing errors in the fine mesh approximation. Initially developed for uniform meshes (Picklo and Ryan, "Enhance Multiresolution Analysis...",2022), in this talk we will demonstrate the applicability of this filter-based reconstruction technique for error reduction on nonuniform meshes.    
+    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75639' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1284' style='display:block'><a href='javascript:toggle_star(1284)' class='star'><span class='star1284'>&star;</span></a> <b>4:20 PM&ndash;4:35 PM (E101)</b> Jennifer K. Ryan, MSIAC Package: a Filtering Tool for General Applications <span id='bitlink-1186'><small><a href='javascript:show_bit(1186)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1186' style='display:none'><small><a href='javascript:hide_bit(1186)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>MSIAC Package: a Filtering Tool for General Applications</b><br />Jennifer K. Ryan<br />Wednesday, March 1 4:20 PM&ndash;4:35 PM<br />This is the 2nd talk in <a href='session-283.html'>Numerical Filtering and Property Preserving Methods - Part I of II</a> (4:00 PM&ndash;5:40 PM)<br />E101<br /><br /><small>The Smoothness-Increasing Accuracy-Conserving filter (SIAC) is a post-processor that  extracts accuracy from DG and FEM solutions exploiting the natural superconvergence of these methods. It reduces oscillations in the errors and increases convergence rates, leading in general, to lower errors. These filters have been applied to aeroacoustic problems, visualization of streamlines and isosurfaces, adaptivity and shock regularization. Designing and implementing an effective tool for general applications implies dealing with the underlying mesh and domain boundaries, selecting suitable filter parameters, and addressing computational times. This talk presents a numerical framework and a filtering software package showing applications in DG-FEM data.   </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75639' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1287' style='display:block'><a href='javascript:toggle_star(1287)' class='star'><span class='star1287'>&star;</span></a> <b>4:40 PM&ndash;4:55 PM (E101)</b> Gustaaf Jacobs, Three Applications of High-Order Polynomial Kernels That Approximate the Dirac Delta with Vanishing Moments <span id='bitlink-1188'><small><a href='javascript:show_bit(1188)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1188' style='display:none'><small><a href='javascript:hide_bit(1188)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Three Applications of High-Order Polynomial Kernels That Approximate the Dirac Delta with Vanishing Moments</b><br />Gustaaf Jacobs<br />Wednesday, March 1 4:40 PM&ndash;4:55 PM<br />This is the 3rd talk in <a href='session-283.html'>Numerical Filtering and Property Preserving Methods - Part I of II</a> (4:00 PM&ndash;5:40 PM)<br />E101<br /><br /><small>Necessary properties of a high-order, polynomial approximation of the Dirac delta function with compact support of the form [Jean-Piero et al., SIAM SISC, 2014]\[\delta^{m,k}_\epsilon(x) =  \left\{\begin{aligned}&\epsilon^{-1}P^{m,k}(x/\epsilon),\ x\in[-\epsilon,\epsilon],\\ &0,\ \text{otherwise}.  \end{aligned}\right.\]  where $\epsilon>0$ is the support width, include, (1) that on the compactly supported interval the regularized delta function integrates to unity. Secondly, the kernel $P^{m,k}$ must be designed to vanish the first up to the $m^{th}$ moments and $k$ continuous derivatives at the endpoints of the compact support. To vanish the moments the regularized delta can have negative values. The vanishing moments ensure that the regularized Dirac delta kernel converges to the exact Dirac delta function at $O(\epsilon^{m+1})$ rate. This moment property is necessary for the construction of high-order approximations of singular Dirac delta source terms in spectral approximations of PDEs [Jean-Piero et al., SIAM SISC, 2014]. To preserve high-order spatial accuracy it was further shown that the optimal value for the compact support must be $\epsilon=N_x^{-k/(m+k+2)}$. We will discuss applications of this kernel to solve PDEs with high-order order accuracy including PDEs with singular sources, the regularized solution of PDEs that admit singular solutions, and the approximation of deterministic initial conditions of governing PDEs for probability density functions.    
+    
+    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75639' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

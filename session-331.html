@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Stencil Computation for Scientific Applications - Part I of II</h2><div class='index-talk' id='talk1501' style='display:block'><a href='javascript:toggle_star(1501)' class='star'><span class='star1501'>&star;</span></a> <b>4:00 PM&ndash;4:15 PM (D408)</b> Long Qu, Leveraging Stencil Computation Performance with Temporal Blocking <span id='bitlink-1378'><small><a href='javascript:show_bit(1378)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1378' style='display:none'><small><a href='javascript:hide_bit(1378)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Leveraging Stencil Computation Performance with Temporal Blocking</b><br />Long Qu<br />Wednesday, March 1 4:00 PM&ndash;4:15 PM<br />This is the 1st talk in <a href='session-331.html'>Stencil Computation for Scientific Applications - Part I of II</a> (4:00 PM&ndash;5:40 PM)<br />D408<br /><br /><small>Stencil computations constitute the core kernel in many temporally explicit approaches found in structured grid finite-difference, finite-volume, and finite-element discretizations of partial differential equation conservation laws. Using various blocking dimensions, the Spatial Blocking (SB) approach enables data reuse within multiple cache levels. Introduced in GIRIH, the Multi-core Wavefront Diamond blocking (MWD) method further optimizes memory accesses of stencil algorithms by combining the concepts of diamond tiling and cache-aware wavefront temporal blocking, leading to a significant increase in data reuse and locality. We evaluate the performance of MWD on a variety of recent multi-core architectures.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75736' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1503' style='display:block'><a href='javascript:toggle_star(1503)' class='star'><span class='star1503'>&star;</span></a> <b>4:20 PM&ndash;4:35 PM (D408)</b> Fabio Luporini, Automated Temporal Blocking in the Devito Compiler <span id='bitlink-1379'><small><a href='javascript:show_bit(1379)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1379' style='display:none'><small><a href='javascript:hide_bit(1379)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Automated Temporal Blocking in the Devito Compiler</b><br />Fabio Luporini<br />Wednesday, March 1 4:20 PM&ndash;4:35 PM<br />This is the 2nd talk in <a href='session-331.html'>Stencil Computation for Scientific Applications - Part I of II</a> (4:00 PM&ndash;5:40 PM)<br />D408<br /><br /><small>The finite-difference (FD) method often solves PDEs, resulting in stencil kernels.  Our work is motivated by accelerating stencil kernels through performance optimisations that exploit memory hierarchy. We focus on temporal blocking (aka time-tiling), which has long been proven beneficial for performance.  Temporal blocking reduces the required memory bandwidth of stencil computations by re-using data from the cache for multiple time steps.  However, applying temporal blocking to practical applications' stencils remains challenging.  These computations are more complex as they include sparsely located operators not aligned with the computational FD grid, like sources and receivers that perform scatter and gather operations, boundary and initial conditions, complicated physics, data dependencies and others.  Like other stencil optimisations, temporal blocking is error-prone and hard to implement by hand, requiring careful software engineering.  We present a fully-automated temporal blocking code generation through Devito, demonstrated in various applications of significant industrial interest. Devito offers a DSL to model simulations from a high-level symbolic abstraction and a compiler framework to automatically generate optimised stencil solvers.  Our implementation works in tandem with other domain-specific and compiler optimisations.  We evaluate the performance of our scheme on modern CPUs against highly-optimised stencil kernels generated by the Devito framework.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75736' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk1505' style='display:block'><a href='javascript:toggle_star(1505)' class='star'><span class='star1505'>&star;</span></a> <b>4:40 PM&ndash;4:55 PM (D408)</b> Philipp Neumann, Stencil Operator Inference Using Regression Techniques <span id='bitlink-1380'><small><a href='javascript:show_bit(1380)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-1380' style='display:none'><small><a href='javascript:hide_bit(1380)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Stencil Operator Inference Using Regression Techniques</b><br />Philipp Neumann<br />Wednesday, March 1 4:40 PM&ndash;4:55 PM<br />This is the 3rd talk in <a href='session-331.html'>Stencil Computation for Scientific Applications - Part I of II</a> (4:00 PM&ndash;5:40 PM)<br />D408<br /><br /><small>Due to rapid developments in the field of machine learning and data science, the derivation of mathematical relationships by learning ODEs or PDEs from field data has gained much attraction in recent years. While this directly yields a (more or less) continuous description of the underlying problem, this leaves the application experts still with the burden of discretizing the problem when a numerical simulation is anticipated.    
+I present recent work on the inference of stencil expressions from prescribed field data, i.e. learning directly a discrete relationship from the data. Focussing on the use of regression techniques, I discuss challenges such as the handling of noise in the data, stability of the derived stencil expressions or the treatment of heterogeneous coefficients in space or time. I will base my discussion on various well-known first- and second-order differential problems and their solutions which are used to generate the field data.  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75736' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

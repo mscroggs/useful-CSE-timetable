@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Optimal Control of Open Quantum Systems - Part II of II</h2><div class='index-talk' id='talk339' style='display:block'><a href='javascript:toggle_star(339)' class='star'><span class='star339'>&star;</span></a> <b>4:45 PM&ndash;5:00 PM (E108)</b> Maximilian Seifert, Higher Radix Quantum Computation Through Optimal Control Under Experimental Constraints <span id='bitlink-310'><small><a href='javascript:show_bit(310)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-310' style='display:none'><small><a href='javascript:hide_bit(310)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Higher Radix Quantum Computation Through Optimal Control Under Experimental Constraints</b><br />Maximilian Seifert<br />Thursday, March 2 4:45 PM&ndash;5:00 PM<br />This is the 1st talk in <a href='session-75.html'>Optimal Control of Open Quantum Systems - Part II of II</a> (4:45 PM&ndash;6:25 PM)<br />E108<br /><br /><small>Current quantum hardware consists of tens or up to few hundreds of qubits, depending on the underlying architecture. Maximizing the utility of these machines involves not only refining the individual qubits but also improving their control. High-fidelity gates enabled by advanced control techniques applied to an increasing number of qubits will be necessary to demonstrate practical applications.    
+I will present some recent work on maximizing quantum resources by breaking the two-state abstraction and using qutrits and ququarts for computation instead. Here optimal control methods allow for faster direct state manipulation, enabling well-performing higher-radix computation architectures. Based on collaborations with experimental groups, I will further address implications of experimental settings on control methods, discussing constraints as well as opportunities for optimal control approaches.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75325' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk344' style='display:block'><a href='javascript:toggle_star(344)' class='star'><span class='star344'>&star;</span></a> <b>5:05 PM&ndash;5:20 PM (E108)</b> Stefanie Guenther, Leveraging Quantum Decoherence for Fast Ground State Reset and Pure-State Preparation <span id='bitlink-314'><small><a href='javascript:show_bit(314)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-314' style='display:none'><small><a href='javascript:hide_bit(314)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Leveraging Quantum Decoherence for Fast Ground State Reset and Pure-State Preparation</b><br />Stefanie Guenther<br />Thursday, March 2 5:05 PM&ndash;5:20 PM<br />This is the 2nd talk in <a href='session-75.html'>Optimal Control of Open Quantum Systems - Part II of II</a> (4:45 PM&ndash;6:25 PM)<br />E108<br /><br /><small>A key requirement for building general purpose quantum computers is the ability to perform fast and accurate state preparation, e.g. to initialize quantum algorithms into well defined states, for fault-tolerant quantum memory, or quantum correction schemes requiring a continuous supply of qubits in a low-entropy state, such as the ground state. Unconditional quantum state preparation requires the system under study to be coupled to a quantum dissipative channel, allowing for entropy exchange between the system of interest and a bath. In this talk, we will present a framework for encouraging these processes through driven controls that are optimally designed using numerical optimal control techniques on classical HPC platforms.  We model the underlying quantum dynamics in terms of the density matrix satisfying Lindblad's master equation, driven by control pulses whose frequencies precisely trigger qubit state transitions, and apply gradient-based optimization to design optimal control pulse shapes. Utilizing a specific optimization objective, we show how an ensemble of initial density matrices can be used as a single initial state throughout the optimization process, while achieving the desired target state for any initial qubit state. The scheme enables automated design of optimal state preparation protocols that achieve faster ground state reset than traditional protocols as well as general pure-state preparation targeting decoherence-protected qubits.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75325' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk345' style='display:block'><a href='javascript:toggle_star(345)' class='star'><span class='star345'>&star;</span></a> <b>5:25 PM&ndash;5:40 PM (E108)</b> Andy J. Goldschmidt, Quantum Process Engineering using Iterative Learning Control <span id='bitlink-315'><small><a href='javascript:show_bit(315)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-315' style='display:none'><small><a href='javascript:hide_bit(315)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Quantum Process Engineering using Iterative Learning Control</b><br />Andy J. Goldschmidt<br />Thursday, March 2 5:25 PM&ndash;5:40 PM<br />This is the 3rd talk in <a href='session-75.html'>Optimal Control of Open Quantum Systems - Part II of II</a> (4:45 PM&ndash;6:25 PM)<br />E108<br /><br /><small>Quantum optimal control (QOC) promises to implement efficient pulse instructions for repeatable quantum processes such as gates and algorithm subroutines. Typically, QOC objectives are stated in terms of a terminal cost. Alternatively, the QOC objective can include both a running and terminal cost for the purpose of tracking a design trajectory. If existing QOC software is treated as a black box, then a robust, fast, and optimal-bandwidth control pulse can be obtained and used to induce a corresponding best-case design trajectory. This QOC solution can still suffer from model mismatch with the experimental system. In this work, we apply iterative learning control (ILC) to eliminate the tracking error from model mismatch by leveraging a limited number of state tomography experiments along the process trajectory.  Many industrial control applications successfully operate by tracking specific trajectories of repetitive tasks across iterations. As the process repeats, any errors along the iteration axis would also repeat; by combining the model and feedback, ILC offers a framework for suppressing these errors. To demonstrate our approach, we apply ILC to realize the necessary pulses to track the design trajectory of representative one and two-qubit gates under quasi-static control errors.    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75325' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>

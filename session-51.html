@@ -1,0 +1,53 @@
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Useful CSE timetable</title>
+<style type='text/css'>
+a.star {text-decoration:none;font-size:150%}
+.header-links a {display:inline-block;padding:10px}
+.header-links a,.header-links a:link,.header-links a:visited,.header-links a:active {color:blue;text-decoration:none}
+.header-links a:hover {color:blue;text-decoration:underline}
+</style>
+<script type='text/javascript' src='fave.js?v=2023-02-27-02'></script>
+
+</head>
+<body>
+<div class='header-links'>
+<a href='index.html'>Personal timetable</a>
+<a href='speakers.html'>List of speakers</a>
+<a href='titles.html'>List of talk titles</a>
+<a href='sync.html'>Copy favourites to another device</a>
+</div>
+<div class='header-links'>
+<a href='https://meetings.siam.org/program.cfm?CONFCODE=cse23' target='new'><small>Official conference programme</small></a>
+<a href='https://raw.githubusercontent.com/mscroggs/useful-CSE-timetable/json/talks.json' target='new'><small>Talks in JSON format</small></a>
+<a href='https://github.com/mscroggs/useful-CSE-timetable/' target='new'><small>GitHub</small></a>
+</div>
+<h1>SIAM CSE 2023</h1>
+
+
+<h2>Machine Learning for Computational Solid Mechanics - Part II of II</h2><div class='index-talk' id='talk231' style='display:block'><a href='javascript:toggle_star(231)' class='star'><span class='star231'>&star;</span></a> <b>2:15 PM&ndash;2:30 PM (G105)</b> Krishna Garikipati, Machine Learning Solvers of PDEs with Uncertainty Quantification <span id='bitlink-215'><small><a href='javascript:show_bit(215)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-215' style='display:none'><small><a href='javascript:hide_bit(215)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Machine Learning Solvers of PDEs with Uncertainty Quantification</b><br />Krishna Garikipati<br />Tuesday, February 28 2:15 PM&ndash;2:30 PM<br />This is the 1st talk in <a href='session-51.html'>Machine Learning for Computational Solid Mechanics - Part II of II</a> (2:15 PM&ndash;3:55 PM)<br />G105<br /><br /><small>We propose a physics-constrained neural network (NN) approach to solve partial differential equations (PDEs) without labels. We express the loss function of these NNs in terms of the  residual of PDEs obtained through a discrete, convolution operator-based, and vectorized implementation. We explore an encoder-decoder NN structure for both deterministic and   probabilistic models, with Bayesian NNs (BNNs) for the latter. For BNNs, the discretized residual is used to construct the likelihood function. Deterministic and probabilistic convolutional layers are used to learn the applied boundary conditions (BCs) and to detect the problem domain. Dirichlet and Neumann BCs are specified as inputs to NNs, and we explore whether a single NN can solve for similar physics; i.e., the same PDE, but with different BCs and on a number of problem domains. The trained BNN PDE solvers demonstrate a degree of success at extrapolated predictions for BCs that they were not exposed to during training. We demonstrate the capacity and performance of the proposed framework by applying it to different steady-state and equilibrium boundary value problems of diffusion, linear and nonlinear elasticity. Such NN solution frameworks are important for high-throughput solutions of PDEs with different boundary conditions and on varying domains in support of design and decision-making.    
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75277' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk232' style='display:block'><a href='javascript:toggle_star(232)' class='star'><span class='star232'>&star;</span></a> <b>2:35 PM&ndash;2:50 PM (G105)</b> Craig M. Hamel, Incorporating Full-Field Diagnostic Data into Constitutive Model Discovery via Physics Informed Neural Networks <span id='bitlink-216'><small><a href='javascript:show_bit(216)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-216' style='display:none'><small><a href='javascript:hide_bit(216)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Incorporating Full-Field Diagnostic Data into Constitutive Model Discovery via Physics Informed Neural Networks</b><br />Craig M. Hamel<br />Tuesday, February 28 2:35 PM&ndash;2:50 PM<br />This is the 2nd talk in <a href='session-51.html'>Machine Learning for Computational Solid Mechanics - Part II of II</a> (2:15 PM&ndash;3:55 PM)<br />G105<br /><br /><small>The Virtual Fields Method (VFM) and Finite Element Model Updating (FEMU) have shown success in calibrating constitutive model parameters for nonlinear materials. However, VFM faces difficulties where plane-stress assumptions break down, and FEMU remains challenging when calibrating complex models where computational inefficiencies of the inverse problem are intractable. In this presentation a novel physics informed neural network (PINN) architecture for calibration and discovery of hyperelastic constitutive models will be proposed which alleviates some of the weaknesses of VFM and FEMU due to the interpolation power of neural networks. Our architecture consists of radial basis function neural networks and input convex neural networks as a constitutive model surrogate trained with a combined least-squares and gradient descent update. This approach ensures that conservation of momentum is obeyed to higher precision then typical PINNs while searching for constitutive models that obey convexity and thus material stability. Exemplars utilizing synthetic experimental data will be shown that are illustrative of typical mechanical test specimens with non-homogenous strain fields. Sandia National Laboratories is a multi-mission laboratory managed and operated by National Technology & Engineering Solutions of Sandia, LLC, a wholly owned subsidiary of Honeywell International Inc., for the U.S. Department of Energy's National Nuclear Security Administration under contract DE-NA0003525.    
+  </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75277' target='new'>More information on the conference website</a></small></div></span></div><div class='index-talk' id='talk234' style='display:block'><a href='javascript:toggle_star(234)' class='star'><span class='star234'>&star;</span></a> <b>2:55 PM&ndash;3:10 PM (G105)</b> Olalekan Babaniyi, Inferring the Basal Sliding Coefficient Field for the Stokes Ice Sheet Model under Rheological Uncertainty <span id='bitlink-217'><small><a href='javascript:show_bit(217)'>&#x25BC; Show talk info &#x25BC;</a></small></span><span id='bit-217' style='display:none'><small><a href='javascript:hide_bit(217)'>&#x25B2; Hide talk info &#x25B2;</a></small><div style='padding:20px'><b>Inferring the Basal Sliding Coefficient Field for the Stokes Ice Sheet Model under Rheological Uncertainty</b><br />Olalekan Babaniyi<br />Tuesday, February 28 2:55 PM&ndash;3:10 PM<br />This is the 3rd talk in <a href='session-51.html'>Machine Learning for Computational Solid Mechanics - Part II of II</a> (2:15 PM&ndash;3:55 PM)<br />G105<br /><br /><small>Modeling of the dynamics of polar ice sheets is critical to enable relevant projections of future sea levels. One of the parameters that influences the predictions is the basal sliding coefficient. We consider the problem of inferring the basal sliding coefficient of an ice sheet from noisy surface velocity measurements. The dynamics of the ice are modeled by a nonlinear Stokes equation. Inference is further complicated by the fact that the rheological parameters are unknown and uncertain. The standard approach would be to jointly infer the basal sliding coefficient and rheological parameters. However, the rheological parameters are not of primary interest and are distributed throughout the domain, thus greatly increasing the computational costs and ill-posedness associated with the problem. To avoid carrying out joint inference, we employ the Bayesian approximation error (BAE) approach which allows for offline premarginization over the rheological parameters.     
+We show numerical examples which demonstrate that incorrectly fixing the rheological parameters may result in unphysical artifacts in the reconstructed basal sliding coefficient, and posterior infeasibility (ie. true parameter is not supported by the posterior model) due to underestimation of uncertainty in the reconstructions.     
+    </small><br /><br /><small><a href='https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75277' target='new'>More information on the conference website</a></small></div></span></div>
+
+</body>
+</html>
